@@ -1,0 +1,46 @@
+<ng-container *ngIf="size === 'small'; else largeBlogItem">
+  <ng-container *ngIf="content">
+    <nz-card [nzBordered]="false" [nzCover]="coverTemplate"
+             class="blog-item-small w-full bg-transparent !rounded-3xl"
+             nzHoverable>
+      <h3 class="blog-tag">{{content.tags[0]}}</h3>
+      <nz-card-meta [nzDescription]="content.shortDescription" [nzTitle]="content.title"></nz-card-meta>
+      <div class="flex blog-item-numbers gap-4 mt-6 flex-wrap h-8 overflow-y-hidden">
+        <nz-statistic [nzPrefix]="prefixView" [nzSuffix]="'Reads'" [nzValue]="(1128 | number)!"></nz-statistic>
+        <ng-template #prefixView><span nz-icon nzTheme="outline" nzType="eye"></span></ng-template>
+        <nz-statistic [nzPrefix]="prefixLike" [nzSuffix]="'Like'" [nzValue]="(1128 | number)!"></nz-statistic>
+        <ng-template #prefixLike><span nz-icon nzTheme="outline" nzType="heart"></span></ng-template>
+        <nz-statistic [nzPrefix]="prefixComment" [nzSuffix]="'Comments'"
+                      [nzValue]="(1128 | number)!"></nz-statistic>
+        <ng-template #prefixComment><span nz-icon nzTheme="outline" nzType="comment"></span></ng-template>
+        <!--        <label class="flex items-center mt-[4px] ml-auto">{{content.date | date}}</label>-->
+      </div>
+    </nz-card>
+    <ng-template #coverTemplate>
+      <img [alt]="content.title" [src]="content.image" />
+    </ng-template>
+  </ng-container>
+</ng-container>
+<ng-template #largeBlogItem>
+  <ng-container *ngIf="content">
+    <nz-card [nzBordered]="false" [nzCover]="coverTemplate"
+             class="blog-item-large w-full flex bg-transparent !rounded-3xl"
+             nzHoverable>
+      <h3 class="blog-tag">{{content.tags[0]}}</h3>
+      <nz-card-meta [nzDescription]="content.shortDescription" [nzTitle]="content.title"></nz-card-meta>
+      <div class="flex blog-item-numbers gap-4 mt-auto">
+        <nz-statistic [nzPrefix]="prefixView" [nzSuffix]="'Reads'" [nzValue]="(1128 | number)!"></nz-statistic>
+        <ng-template #prefixView><span nz-icon nzTheme="outline" nzType="eye"></span></ng-template>
+        <nz-statistic [nzPrefix]="prefixLike" [nzSuffix]="'Like'" [nzValue]="(1128 | number)!"></nz-statistic>
+        <ng-template #prefixLike><span nz-icon nzTheme="outline" nzType="heart"></span></ng-template>
+        <nz-statistic [nzPrefix]="prefixComment" [nzSuffix]="'Comments'"
+                      [nzValue]="(1128 | number)!"></nz-statistic>
+        <ng-template #prefixComment><span nz-icon nzTheme="outline" nzType="comment"></span></ng-template>
+        <!--        <label class="flex items-center mt-[4px] ml-auto">{{content.date | date}}</label>-->
+      </div>
+    </nz-card>
+    <ng-template #coverTemplate>
+      <img [alt]="content.title" [src]="content.image" />
+    </ng-template>
+  </ng-container>
+</ng-template>

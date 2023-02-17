@@ -1,0 +1,9 @@
+@import "../../../assets/styles/theme";
+
+.personal-stats nz-statistic .ant-statistic-content * {
+  @apply header-font font-normal;
+}
+
+app-about-me *:not(button, button *) {
+  @apply dark-color #{!important};
+}

@@ -1,0 +1,14 @@
+.ant-radio-button-wrapper {
+  border-width: 0px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.ant-radio-button-wrapper:before {
+  visibility: hidden;
+}
+
+.ant-radio-button-wrapper-checked {
+  color: white !important;
+}

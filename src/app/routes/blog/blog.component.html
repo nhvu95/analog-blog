@@ -1,0 +1,15 @@
+<app-header class="w-max z-10" [content]="'Blog'"></app-header>
+<div class="relative h-20 flex">
+  <app-search-bar class="z-20 -top-8 absolute flex w-full"></app-search-bar>
+  <div class="fake-input-shadow -top-8 w-1/2 ml-1/4 h-16 absolute rounded-2xl z-0 w-full"></div>
+</div>
+<app-topic-filter [filters]="topicList" class="flex"></app-topic-filter>
+<app-blog-item [content]="postList[0]" class="block mt-16 mb-[30px]" size="large"></app-blog-item>
+
+<div [nzGutter]="{ xs: 16, sm: 24, md: 32, lg: 57 }" nz-row>
+  <div *ngFor="let post of postList" [nzSpan]="8" class="gutter-row mt-[35px]" nz-col>
+    <div class="inner-box">
+      <app-blog-item [content]="post" class="block" size="small"></app-blog-item>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.card-header {
+  border-radius: 2rem;
+  background: #7D41E1;
+  @apply h-[190px];
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    transform: scaleY(0.9);
+  }
+
+  h1:before {
+
+  }
+}

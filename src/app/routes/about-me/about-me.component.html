@@ -1,0 +1,82 @@
+<h1 class="font-semibold mb-8 text-center dark-color" nz-typography><span
+  class="border-b-2">Vu Hieu </span><span>Nguyen</span>
+</h1>
+
+<div nz-row nzGutter="16">
+  <div nz-col nzSpan="8">
+    <ng-container *ngTemplateOutlet="leftPannel"></ng-container>
+  </div>
+  <div nz-col nzSpan="8">
+    <ng-container *ngTemplateOutlet="centerPannel"></ng-container>
+  </div>
+  <div nz-col nzSpan="8">
+    <ng-container *ngTemplateOutlet="rightPannel"></ng-container>
+  </div>
+</div>
+
+<ng-template #leftPannel>
+  <h4 nz-typography>Skill set</h4>
+  <div class="mt-8">
+    <h5 class="flex items-center gap-2" nz-typography><span nz-icon nzTheme="outline" nzType="global"></span>Web
+      Development
+    </h5>
+    <p nz-typography>
+      Full Stack Web Engineer with Angular and Spring Boot. Have experience with Cloud Services like AWS and Azure.
+    </p>
+  </div>
+  <div class="mt-8">
+    <h5 class="flex items-center gap-2" nz-typography><span nz-icon nzTheme="outline" nzType="tool"></span>Automation
+      Tool</h5>
+    <p>
+      Selenium and Testcafe are two of my favorite. They help me serve with crawler tools and automation testing
+      tools. Sometimes I use native Javascript with Nodejs for tools handling daily tasks.
+    </p>
+  </div>
+  <div class="mt-8">
+    <h5 class="flex items-center gap-2" nz-typography><span nz-icon nzTheme="outline" nzType="reconciliation"></span>Solution
+      Consulting</h5>
+    <p>
+      Besides solution consulting, I also can design systems and join in all high-level phases of the Software
+      Development Process, from Requirement Analysis, Basic Design, and Detail Design to Unit Tests, Integration
+      Tests, and giving documents for them.
+    </p>
+  </div>
+</ng-template>
+<ng-template #centerPannel>
+  <div class="flex h-full">
+    <!--    <nz-avatar [nzSize]="400"-->
+    <!--               class="ant-avatar"-->
+    <!--               nzShape="square"-->
+    <!--               nzSrc="https://www.bighospitality.co.uk/var/wrbm_gb_hospitality/storage/images/3/3/5/2/2533-4-eng-GB/Business-Profile.jpg">-->
+    <!--    </nz-avatar>-->
+    <div class="w-[320px] h-[320px] mx-auto mt-auto rounded-t-3xl border-t-2 border-x-2 px-2 pt-2">
+      <div class="w-[300px] h-[310px] bg-blue-100 mx-auto mt-auto rounded-t-3xl"></div>
+
+    </div>
+  </div>
+</ng-template>
+<ng-template #rightPannel>
+  <h4 nz-typography>Software Engineer based in VietNam</h4>
+<!--  <p class="mt-8">-->
+<!--    {{years}} Years isn't a long time, but it gives me chances to work with both Consulting and Product types. There,-->
+<!--    I had opportunities to show my ability and my bravery, giving me valuable lessons. Moments and memories with-->
+<!--    friends and colleagues are the things I will never forget.-->
+<!--  </p>-->
+  <p class="mt-8">
+    So glad you are here, my friends. I write these not to show my experience, knowledge, or that. Here is
+    just where I note all the things I learned after a long day at work, realize my ideas, and try new things I am
+    impressed with, or simply it is where I note some exciting things I got from the internet.
+  </p>
+  <p class="mt-4">
+    And If you have a unique opportunity, project, job, or something that you think I might be interested in, feel free to contact me. Thank you for being here.
+  </p>
+  <button class="mt-12 m-b-12" nz-button>Contact me</button>
+  <div class="flex personal-stats gap-8 mt-6">
+    <nz-statistic [nzValue]="(years | number)!" class="flex flex-col flex-col-reverse" nzSuffix="Years"
+                  nzTitle="Experience"></nz-statistic>
+    <nz-statistic [nzValue]="(4 | number)!" class="flex flex-col flex-col-reverse" nzSuffix="+"
+                  nzTitle="Cert/Award"></nz-statistic>
+    <nz-statistic [nzValue]="(30 | number)!" class="flex flex-col flex-col-reverse" nzSuffix="+"
+                  nzTitle="Improved stats"></nz-statistic>
+  </div>
+</ng-template>

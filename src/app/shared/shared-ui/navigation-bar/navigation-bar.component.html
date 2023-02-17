@@ -1,0 +1,25 @@
+<div class="navigation-bar items-center w-full inline-flex h-[150px]" id="navbar">
+  <nz-avatar-group class="flex-row whitespace-nowrap items-center w-48">
+    <nz-avatar *ngIf="logo" [nzSize]="55" [nzSrc]="logo" class="ant-avatar" nzShape="square"></nz-avatar>
+    <!--        <nz-avatar *ngIf="logos" [nzSrcSet]="logos" nzShape="square" nzSize="large"></nz-avatar>-->
+    <h3 class="mb-0 site-title dark-primary text-5xl">VUE BLOG</h3>
+  </nz-avatar-group>
+  <div class="icons-list invisible">
+    <span *ngFor="let logo of subLogos" [nzType]="logo.label" class="mx-4 text-24 !mr-2.5" nz-icon
+          nzTheme="outline"></span>
+  </div>
+  <ul class="!mx-auto menu-list normal-color" nz-menu nzMode="horizontal">
+    <li *ngFor="let item of menus" [nzMatchRouterExact]="true" nz-menu-item>
+      <a [rel]="item.label" [routerLink]="[item.link]" class="text-[16px]">{{item.label}}</a>
+    </li>
+  </ul>
+  <div class="icons-list dark-primary">
+    <span *ngFor="let logo of subLogos" [nzType]="logo.label" class="mx-4 text-24 !mr-2.5" nz-icon
+          nzTheme="outline"></span>
+  </div>
+  <button aria-label="Contact me" class="btn-contact-me !ml-4 !w-40 !h-50px" id="btnContactMe" nz-button nzShape="round"
+          nzSize="large"
+          nzType="primary">Contact me
+  </button>
+
+</div>

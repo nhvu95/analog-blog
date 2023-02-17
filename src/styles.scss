@@ -1,0 +1,103 @@
+@import "src/assets/styles/shared";
+@import "src/assets/styles/theme";
+
+$rem: 16px;
+.dark-primary, .dark-primary a {
+  color: $dark-color !important;
+}
+
+.normal-color, .normal-color a {
+  color: $normal-text-color !important;
+}
+
+html {
+  font-size: $rem;
+
+  * {
+    font-family: $text-font;
+  }
+
+  h1, h2, h3, h4, h5, h6, h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+    font-family: $header-font;
+  }
+
+  body{
+    overflow-y: auto;
+    overflow-y: overlay;
+    font-size: $rem;
+  }
+}
+
+::ng-deep app-navbar {
+  .ant-menu-item-selected a {
+    text-shadow: 0px 0px 0.5px $normal-text-color;
+  }
+}
+
+@layer utilities {
+  .semi-bold {
+    text-shadow: 0px 0px 0.5px $normal-text-color;
+  }
+
+  .header-font {
+    font-family: $header-font;
+  }
+
+  .dark-color {
+    color: $dark-color;
+  }
+}
+
+@media only screen and (max-width: 1470px) {
+  body, html {
+    font-size: 14px !important;
+  }
+  nhvu95-portfolio-blog {
+    .gutter-row {
+      @apply px-[20px] #{!important};
+    }
+    .blog-item-small .ant-card-body {
+      @apply px-[20px] #{!important};
+    }
+    .blog-item-large .ant-card-body {
+      @apply px-[30px] #{!important};
+    }
+    .blog-item-large .ant-card-meta-title {
+      @apply text-[35px] leading-tight #{!important};
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  nhvu95-ws-portfolio-root {
+    @apply px-[80px] #{!important};
+  }
+  nhvu95-portfolio-blog {
+    .gutter-row {
+      @apply px-[20px] #{!important};
+    }
+    .blog-item-small .ant-card-body {
+      @apply px-[20px] #{!important};
+    }
+    .blog-item-small .ant-card-meta-title {
+      @apply text-[18px] leading-tight #{!important};
+    }
+    .blog-item-small .ant-card-meta-description {
+      @apply text-[14px] #{!important};
+    }
+  }
+  nhvu95-navbar .icons-list {
+    @apply hidden;
+  }
+
+  nhvu95-navbar .menu-list {
+    @apply flex;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  nhvu95-ws-portfolio-root {
+    @apply px-[60px] #{!important};
+  }
+}
+

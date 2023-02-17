@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: "Poppins";
+  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+}
+
+#navbar {
+
+  .menu-list, #btnContactMe {
+    font-family: "Quicksand", sans-serif;
+  }
+
+  .menu-list a {
+    font-weight: 500;
+  }
+
+  .site-title {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .ant-menu-item-selected::after {
+    //max-width: max(30%, 2rem) !important;
+    //height: 5px;
+    //border-left: 5px dotted !important;
+    //border-bottom: 0px;
+    //outline: auto;
+  }
+}

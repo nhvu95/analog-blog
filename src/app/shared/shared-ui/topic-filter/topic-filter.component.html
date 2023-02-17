@@ -1,0 +1,5 @@
+<nz-radio-group [(ngModel)]="radioValue" class="!mx-auto rad-grp-topic-filter" nzButtonStyle="solid" nzSize="large">
+  <label *ngFor="let item of filters" [nzValue]="item?.value"
+         class="!min-w-24 text-center !rounded-full !mx-3 normal-color"
+         nz-radio-button>{{item?.label}}</label>
+</nz-radio-group>
