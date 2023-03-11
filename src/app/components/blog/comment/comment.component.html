@@ -1,0 +1,41 @@
+<nz-comment>
+  <nz-avatar nzSrc="https://source.boringavatars.com/beam?colors=0284c7,38bdf8,7dd3fc" nz-comment-avatar nzIcon="user" ></nz-avatar>
+  <nz-comment-content>
+    <nz-form-item>
+      <textarea [(ngModel)]="inputValue" nz-input rows="4"></textarea>
+    </nz-form-item>
+    <nz-form-item>
+      <button (click)="handleSubmit()" [disabled]="!inputValue" [nzLoading]="submitting" nz-button nzType="primary">
+        Add Comment
+      </button>
+    </nz-form-item>
+  </nz-comment-content>
+</nz-comment>
+<nz-list *ngIf="data.length" [nzDataSource]="data" [nzItemLayout]="'horizontal'" [nzRenderItem]="item">
+  <ng-template #item let-item>
+    <nz-comment [nzDatetime]="item.createdAt" nzAuthor="Anonymous" class="pt-0">
+      <nz-avatar nz-comment-avatar nzIcon="user"
+                 nzSrc="https://source.boringavatars.com/beam"></nz-avatar>
+      <nz-comment-content>
+        <p>
+          {{item.content}}
+        </p>
+      </nz-comment-content>
+      <nz-comment-action>
+        <div class="flex items-center">
+          <span class="block" (click)="like(item)" [nzTheme]="item.liked > 0 ? 'twotone' : 'outline'" nz-icon
+                nz-tooltip nzTitle="Like" nzType="like">
+          </span>
+          <span class="count like">{{ item.liked }}</span>
+        </div>
+      </nz-comment-action>
+      <nz-comment-action>
+        <div class="flex items-center ml-4">
+          <span class="block" (click)="dislike(item)" [nzTheme]="item.disliked > 0 ? 'twotone' : 'outline'" nz-icon
+            nz-tooltip nzTitle="Dislike" nzType="dislike"></span>
+          <span class="count dislike">{{ item.disliked }}</span>
+        </div>
+      </nz-comment-action>
+    </nz-comment>
+  </ng-template>
+</nz-list>

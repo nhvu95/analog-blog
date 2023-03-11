@@ -1,0 +1,57 @@
+@import "src/assets/styles/theme";
+
+app-creative {
+  nz-card {
+    @apply rounded-2xl #{!important};
+  }
+
+  .ant-card-body {
+    @apply pt-0 pb-2 #{!important};
+  }
+  .item-bottom .ant-card-body{
+    @apply pt-2 #{!important};
+  }
+
+  .outer > .ant-card-body > label {
+    @apply h-8;
+  }
+  .creative-row .ant-card-body label {
+    @apply h-6;
+  }
+  .outer {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  }
+  .outer .ant-card-body {
+    @apply px-2 #{!important};
+  }
+
+  .creative-row .ant-card-body {
+    @apply w-full;
+  }
+
+  .first-domain::after {
+    background-image: url("/iconlist.svg");
+    background-size: 900px 400px;
+    background-position-x: -800px;
+    background-position-y: -200px;
+    content: "Tunnel";
+    @apply w-[100px] h-[100px] absolute right-[-4.3rem] top-4 z-10 text-center;
+  }
+  .second-domain::after {
+    background-image: url("/iconlist.svg");
+    background-size: 900px 400px;
+    background-position-x: -800px;
+    background-position-y: -300px;
+    content: "";
+    @apply w-[100px] h-[30px] absolute right-[-4.3rem] top-[0.6rem] z-10 text-center;
+  }
+}
+
+.detail-container {
+  .detail-img {
+    @apply bg-contain bg-center;
+  }
+}
+.ant-popover-inner {
+  @apply rounded-xl;
+}

@@ -1,26 +1,33 @@
 /// <reference types="vitest" />
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite';
+import { fileURLToPath, URL } from "url";
 import analog from '@analogjs/platform';
 import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vitejs.dev/config/
 export default defineConfig(({mode}) => ({
   publicDir: 'src/assets',
+  cacheDir: "./cache",
   build: {
     target: ['es2020'],
   },
   resolve: {
     mainFields: ['module'],
+    alias: [
+      { find: '@shared', replacement: fileURLToPath(new URL('./src/app/shared/shared-ui/', import.meta.url)) },
+      { find: '@models', replacement:fileURLToPath(new URL( './src/app/shared/models/', import.meta.url)) },
+    ],
   },
   plugins: [analog({
     ssr: true,
-    static: true, // prerender pages without building an SSR server
+    static: true,
     entryServer: '/src/main.server.ts',
     prerender: {
+      discover: true,
       routes: async () => [
-        '/blog',
-        'about-me',
-        '/portfolio',
+        '/about-me',
+        '/creative',
+        '/career'
       ],
     },
     vite: {

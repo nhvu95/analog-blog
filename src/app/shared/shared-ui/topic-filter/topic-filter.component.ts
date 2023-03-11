@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +13,7 @@ export type TopicFilterItem = { value: string; label: string };
   styleUrls: ['./topic-filter.component.scss'],
 })
 export class TopicFilterComponent {
-  @Input() filters: TopicFilterItem[] = [];
+  @Input() topics: TopicFilterItem[] = [];
+  @Output() output = new EventEmitter<string>;
   radioValue = 'All';
 }

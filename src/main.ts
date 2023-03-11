@@ -4,32 +4,23 @@ import {provideFileRouter} from '@analogjs/router';
 
 import {AppComponent} from './app/app.component';
 
-import {
-  GithubOutline,
-  LinkedinOutline,
-  HeartOutline,
-  EyeOutline,
-  CommentOutline,
-  GlobalOutline,
-  ToolOutline,
-  ReconciliationOutline,
-} from '@ant-design/icons-angular/icons';
-import {IconDefinition} from '@ant-design/icons-angular';
 import {NzIconModule} from "ng-zorro-antd/icon";
 import {importProvidersFrom} from "@angular/core";
-import {NoopAnimationsModule} from "@angular/platform-browser/animations";
-
-const icons: IconDefinition[] = [
-  GithubOutline,
-  LinkedinOutline,
-  HeartOutline,
-  EyeOutline,
-  CommentOutline,
-  GlobalOutline,
-  ToolOutline,
-  ReconciliationOutline,
-];
+import {icons} from "./app/shared/shared-ui/icon";
+import {provideNoopAnimations} from "@angular/platform-browser/animations";
+import {CommonModule} from "@angular/common";
+import {provideContent, withMarkdownRenderer} from "@analogjs/content";
+import {provideHttpClient} from "@angular/common/http";
+import  'prismjs/components/prism-java';
+import 'prismjs/themes/prism-okaidia.css';
 
 bootstrapApplication(AppComponent, {
-  providers: [provideFileRouter(), NoopAnimationsModule, importProvidersFrom(NzIconModule.forRoot(icons))],
+  providers: [
+    provideFileRouter(),
+    provideContent(withMarkdownRenderer()),
+    CommonModule,
+    provideHttpClient(),
+    provideNoopAnimations(),
+    importProvidersFrom(NzIconModule.forRoot(icons))
+  ],
 });

@@ -1,0 +1,70 @@
+<ng-container *ngIf="size === 'small'; else largeBlogItem">
+  <ng-container *ngIf="content">
+    <nz-card [nzBordered]="false" [nzCover]="coverTemplate"
+             [routerLink]="content.slug"
+             class="blog-item-small w-full bg-transparent !rounded-3xl shadow" nzHoverable>
+      <h3 class="blog-tag">{{content.tags[0]}}</h3>
+      <nz-card-meta [nzDescription]="content.description" [nzTitle]="content.title"></nz-card-meta>
+      <div class="flex blog-item-numbers gap-4 mt-6 flex-wrap h-8 overflow-y-hidden">
+        <nz-statistic [nzPrefix]="prefixView" [nzSuffix]="'Reads'"
+                      [nzValue]="(content.read ? content.read : 0 | number)!"></nz-statistic>
+        <ng-template #prefixView><span nz-icon nzTheme="outline" nzType="eye"></span></ng-template>
+        <nz-statistic [nzPrefix]="prefixLike" [nzSuffix]="'Like'"
+                      [nzValue]="(content.liked ? content.liked : 0 | number)!"></nz-statistic>
+        <ng-template #prefixLike>
+          <button (click)="likePost(content.slug); $event.stopImmediatePropagation()" class="text-blue-400 flex"
+                  nz-button nzShape="circle" nzSize="large"
+                  nzType="default">
+            <span *ngIf="!liked" [theme]="'outline'" nz-icon nzType="heart"></span>
+            <span *ngIf="liked" [theme]="'fill'" nz-icon nzType="heart"></span>
+          </button>
+        </ng-template>
+        <nz-statistic [nzPrefix]="prefixComment" [nzSuffix]="'Comments'"
+                      [nzValue]="(content.comment ? content.comment : 0 | number)!"></nz-statistic>
+        <ng-template #prefixComment>
+          <span nz-icon nzTheme="outline" nzType="comment"></span>
+        </ng-template>
+        <!--        <label class="flex items-center mt-[4px] ml-auto">{{content.date | date}}</label>-->
+      </div>
+    </nz-card>
+    <ng-template #coverTemplate >
+      <div class="p-2 w-full">
+        <img [alt]="content.title" [src]="content.image"/>
+      </div>
+    </ng-template>
+  </ng-container>
+</ng-container>
+<ng-template #largeBlogItem>
+  <ng-container *ngIf="content">
+    <nz-card [nzBordered]="false" [nzCover]="coverTemplate"
+             [routerLink]="content.slug"
+             class="blog-item-large w-full flex bg-transparent !rounded-3xl shadow" nzHoverable>
+      <h3 class="blog-tag">{{content.tags[0]}}</h3>
+      <nz-card-meta [nzDescription]="content.description" [nzTitle]="content.title"></nz-card-meta>
+      <div class="flex blog-item-numbers gap-4 mt-auto">
+        <nz-statistic [nzPrefix]="prefixView" [nzSuffix]="'Reads'"
+                      [nzValue]="(content.read ? content.read : 0 | number)!"></nz-statistic>
+        <ng-template #prefixView><span nz-icon nzTheme="outline" nzType="eye"></span></ng-template>
+        <nz-statistic [nzPrefix]="prefixLike" [nzSuffix]="'Like'"
+                      [nzValue]="(content.liked ? content.liked : 0 | number)!"></nz-statistic>
+        <ng-template #prefixLike>
+          <button (click)="likePost(content.slug); $event.stopImmediatePropagation()" class="text-blue-400 flex"
+                  nz-button nzShape="circle" nzSize="large"
+                  nzType="default">
+            <span *ngIf="!liked" [theme]="'outline'" nz-icon nzType="heart"></span>
+            <span *ngIf="liked" [theme]="'fill'" nz-icon nzType="heart"></span>
+          </button>
+        </ng-template>
+        <nz-statistic [nzPrefix]="prefixComment" [nzSuffix]="'Comments'"
+                      [nzValue]="(content.comment ? content.comment : 0 | number)!"></nz-statistic>
+        <ng-template #prefixComment><span nz-icon nzTheme="outline" nzType="comment"></span></ng-template>
+        <!--        <label class="flex items-center mt-[4px] ml-auto">{{content.date | date}}</label>-->
+      </div>
+    </nz-card>
+    <ng-template #coverTemplate>
+      <div class="p-2 w-full">
+        <img [alt]="content.title" [src]="content.image"/>
+      </div>
+    </ng-template>
+  </ng-container>
+</ng-template>

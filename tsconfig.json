@@ -2,6 +2,14 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@models": [
+        "src/app/shared/models"
+      ],
+      "@shared": [
+        "src/app/shared/shared-ui"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -22,15 +30,7 @@
       "dom"
     ],
     "useDefineForClassFields": false,
-    "skipLibCheck": true,
-    "paths": {
-      "@models": [
-        "src/app/shared/models"
-      ],
-      "@shared": [
-        "src/app/shared/share-ui"
-      ]
-    }
+    "skipLibCheck": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

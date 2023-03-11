@@ -4,7 +4,7 @@
   "compilerOptions": {
     "composite": false,
     "outDir": "./out-tsc/app",
-    "types": [],
+    "types": []
   },
   "files": ["src/main.ts", "src/main.server.ts"],
   "include": ["src/**/*.d.ts", "src/app/routes/**/*.ts"]

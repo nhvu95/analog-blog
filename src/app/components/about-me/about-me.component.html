@@ -1,0 +1,125 @@
+<h1 class="font-semibold !mb-12 text-center dark-color" nz-typography><span
+  class="border-b-2">Vu Hieu </span><span>Nguyen</span>
+</h1>
+
+<div nz-row nzGutter="16">
+  <div nz-col nzSpan="8">
+    <ng-container *ngTemplateOutlet="leftPannel"></ng-container>
+  </div>
+  <div nz-col nzSpan="8">
+    <ng-container *ngTemplateOutlet="centerPannel"></ng-container>
+  </div>
+  <div nz-col nzSpan="8" class="flex flex-col items-start justify-between">
+    <ng-container *ngTemplateOutlet="rightPannel"></ng-container>
+  </div>
+</div>
+
+<ng-template #leftPannel>
+  <h4 nz-typography>Skill set</h4>
+  <div class="flex flex-col gap-4 pt-0">
+    <div>
+      <h5 class="flex items-center gap-2" nz-typography><span nz-icon nzTheme="outline" nzType="global"></span>Web
+        Development
+      </h5>
+      <div nz-typography class="flex gap-4 mt-4" nzTooltipTitle="Angular">
+        <div>
+          <span class="icon angular w-[50px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">Angular</label>
+        </div>
+        <div>
+          <span class="icon spring-boot w-[50px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">SpringBoot</label>
+        </div>
+        <div>
+          <span class="icon postgres w-[50px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">PostgresSQL</label>
+        </div>
+        <div>
+          <span class="icon azure w-[50px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">Azure</label>
+        </div>
+        <div>
+          <span class="icon aws w-[66px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">AWS</label>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h5 class="flex items-center gap-2" nz-typography><span nz-icon nzTheme="outline" nzType="tool"></span>Automation
+        Tool</h5>
+      <div nz-typography class="flex gap-4 mt-4">
+        <div>
+          <span class="icon selenium w-[50px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">Selenium</label>
+        </div>
+        <div>
+          <span class="icon testcafe w-[50px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">Testcafe</label>
+        </div>
+        <div>
+          <span class="icon javascript w-[50px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">Javascript</label>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h5 class="flex items-center gap-2" nz-typography><span nz-icon nzTheme="outline" nzType="reconciliation"></span>Not
+        just a coder</h5>
+      <div nz-typography class="flex gap-4 mt-4">
+        <div>
+          <span class="icon document w-[50px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">Document & Design</label>
+        </div>
+        <div>
+          <span class="icon team-management w-[50px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">Team management</label>
+        </div>
+        <div>
+          <span class="icon project-management w-[50px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">Project management</label>
+        </div>
+        <div>
+          <span class="icon sharing w-[50px] h-[50px]"></span>
+          <label class="block mx-auto text-sm text-center">Knowledge Sharing</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<ng-template #centerPannel>
+  <div class="flex h-full">
+    <!--    <nz-avatar [nzSize]="400"-->
+    <!--               class="ant-avatar"-->
+    <!--               nzShape="square"-->
+    <!--               nzSrc="https://www.bighospitality.co.uk/var/wrbm_gb_hospitality/storage/images/3/3/5/2/2533-4-eng-GB/Business-Profile.jpg">-->
+    <!--    </nz-avatar>-->
+    <div class="w-[320px] h-[320px] mx-auto mt-auto rounded-t-3xl border-t-2 border-x-2 px-2 pt-2">
+      <div class="w-[300px] h-[310px] bg-blue-100 mx-auto mt-auto rounded-t-3xl"></div>
+
+    </div>
+  </div>
+</ng-template>
+<ng-template #rightPannel>
+  <div>
+    <h4 nz-typography>Software Engineer based in VietNam</h4>
+    <p class="mt-8">
+      Welcome, my dear friends! This website is not about flaunting my expertise or knowledge, but rather a place where
+      I jot down my daily musings, share my ideas, and experiment with new concepts that capture my imagination.
+      Additionally, I also use this platform to curate and share interesting tidbits from the vast expanse of the
+      internet.
+    </p>
+    <p class="mt-4">
+      If you have a project, job, or opportunity that you think might pique my interest, please don't hesitate to get in
+      touch with me. Thank you for visiting!
+    </p>
+  </div>
+  <button class="mt-8 m-b-12" nz-button>Contact me</button>
+  <div class="flex personal-stats gap-8 mt-6">
+    <nz-statistic [nzValue]="(years | number)!" class="flex flex-col flex-col-reverse" nzSuffix="Years"
+                  nzTitle="Experience"></nz-statistic>
+    <nz-statistic [nzValue]="(4 | number)!" class="flex flex-col flex-col-reverse" nzSuffix="+"
+                  nzTitle="Cert/Award"></nz-statistic>
+    <nz-statistic [nzValue]="(30 | number)!" class="flex flex-col flex-col-reverse" nzSuffix="+"
+                  nzTitle="Improved stats"></nz-statistic>
+  </div>
+</ng-template>

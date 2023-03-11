@@ -10,16 +10,29 @@
   </div>
   <ul class="!mx-auto menu-list normal-color" nz-menu nzMode="horizontal">
     <li *ngFor="let item of menus" [nzMatchRouterExact]="true" nz-menu-item>
-      <a [rel]="item.label" [routerLink]="[item.link]" class="text-[16px]">{{item.label}}</a>
+      <a [href]="item.link" [rel]="item.label" class="text-[16px]">{{item.label}}</a>
     </li>
   </ul>
   <div class="icons-list dark-primary">
-    <span *ngFor="let logo of subLogos" [nzType]="logo.label" class="mx-4 text-24 !mr-2.5" nz-icon
-          nzTheme="outline"></span>
+    <a *ngFor="let logo of subLogos" [href]="logo.link" target="_blank">
+      <span [nzType]="logo.label" class="mx-4 text-24 !mr-2.5 hover:text-blue-400" nz-icon nzTheme="outline"></span>
+    </a>
   </div>
-  <button aria-label="Contact me" class="btn-contact-me !ml-4 !w-40 !h-50px" id="btnContactMe" nz-button nzShape="round"
-          nzSize="large"
-          nzType="primary">Contact me
+  <button [nzDropdownMenu]="menu1" aria-label="Contact me" class="btn-contact-me !ml-4 !w-40 !h-50px" id="btnContactMe"
+          nz-button
+          nz-dropdown nzPlacement="bottomRight" nzShape="round"
+          nzSize="large" nzTrigger="click" nzType="primary">Contact me
   </button>
-
+  <nz-dropdown-menu #menu1="nzDropdownMenu">
+    <ul nz-menu class="rounded-lg">
+      <li nz-menu-item (click)="openLink('https://mail.google.com/mail/?view=cm&fs=1&to=nhvu.95@gmail.com&su=HOW%20CAN%20I%20HELP%20U%3F')">
+        <span nz-icon nzTheme="outline"
+              nzType="send" class="mr-2 hover:text-blue-400"></span>
+        nhvu.95@gmail.com
+      </li>
+      <li nz-menu-item>
+        <span nz-icon nzType="phone" nzTheme="outline" class="mr-2 hover:text-blue-400"></span>
+        +84 966 798 256</li>
+    </ul>
+  </nz-dropdown-menu>
 </div>

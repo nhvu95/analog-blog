@@ -15,6 +15,11 @@
             "configFile": "vite.config.ts",
             "outputPath": "dist/client",
             "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets"
+              ]
+            },
             "styles": [
               "src/assets/styles/*",
               "src/styles.css",

@@ -6,6 +6,7 @@ import {NzButtonModule} from 'ng-zorro-antd/button';
 import {NzIconModule} from 'ng-zorro-antd/icon';
 import {RouterLink, RouterLinkActive} from '@angular/router';
 import {MenuItem} from "@models";
+import {NzDropDownModule} from "ng-zorro-antd/dropdown";
 
 @Component({
   selector: 'app-navbar',
@@ -18,6 +19,7 @@ import {MenuItem} from "@models";
     NzIconModule,
     RouterLinkActive,
     RouterLink,
+    NzDropDownModule,
   ],
   templateUrl: './navigation-bar.component.html',
   styleUrls: ['./navigation-bar.component.scss'],
@@ -26,4 +28,8 @@ export class NavigationBarComponent {
   @Input() logo = '';
   @Input() menus: MenuItem[] = [];
   @Input() subLogos: MenuItem[] = [];
+
+  openLink(link: string) {
+    window.open(link);
+  }
 }

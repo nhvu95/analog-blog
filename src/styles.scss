@@ -34,6 +34,109 @@ html {
   }
 }
 
+$bg-image: url("/iconlist.svg");
+$bg-size: 450px 200px;
+
+span.icon {
+  @apply block mx-auto;
+  background-image: $bg-image;
+  background-size: $bg-size;
+}
+
+.angular {
+  background-position-x: -100px;
+  background-position-y: -50px;
+}
+
+.spring-boot {
+  background-position-x: -150px;
+  background-position-y: -50px;
+}
+
+.postgres {
+  background-position-x: -150px;
+  background-position-y: 0px;
+}
+
+.aws {
+  background-position-x: -200px;
+  background-position-y: 0px;
+}
+
+.azure {
+  background-position-x: -200px;
+  background-position-y: -50px;
+}
+
+.selenium {
+  background-position-x: -300px;
+  background-position-y: -0px;
+}
+.testcafe {
+  background-position-x: -350px;
+  background-position-y: -0px;
+}
+.javascript {
+  background-position-x: -400px;
+  background-position-y: -0px;
+}
+.document {
+  background-position-x: -250px;
+  background-position-y: -50px;
+}
+.team-management {
+  background-position-x: -300px;
+  background-position-y: -50px;
+}
+.project-management {
+  background-position-x: -350px;
+  background-position-y: -50px;
+}
+.sharing {
+  background-position-x: -400px;
+  background-position-y: -50px;
+}
+.vuejs {
+  background-position-x: -0px;
+  background-position-y: -100px;
+}
+.f2f {
+  background-position-x: -50px;
+  background-position-y: -100px;
+}
+.server {
+  background-position-x: -100px;
+  background-position-y: -100px;
+}
+.active-mq {
+  background-position-x: -150px;
+  background-position-y: -100px;
+}
+.npm {
+  background-position-x: -200px;
+  background-position-y: -100px;
+}
+.docker {
+  background-position-x: -300px;
+  background-position-y: -100px;
+}
+.cloudflare {
+  background-position-x: -350px;
+  background-position-y: -100px;
+}
+.blog-icon{
+  background-image: url("/icons/favicon-128x128.png") !important;
+  background-position: center !important;
+  background-size: contain !important;
+}
+.tunnel{
+  background-position-x: -400px;
+  background-position-y: -100px;
+}
+.nginx{
+  background-position-x: -350px;
+  background-position-y: -150px;
+}
 @layer utilities {
   .semi-bold {
     text-shadow: 0px 0px 0.5px $normal-text-color;

@@ -1,0 +1,89 @@
+<nz-timeline nzMode="alternate">
+  <nz-timeline-item [nzDot]="nowTemplate">
+    <h5>And now I'm here</h5>
+    <label>If you have a project, job, or opportunity that you think might pique my interest, please don't hesitate to
+      get in touch with me. Thank you for visiting!
+    </label>
+  </nz-timeline-item>
+  <nz-timeline-item [nzDot]="dingTalkTemplate">
+    <h5>Jan-2022</h5>
+    <label>Following the quarantine period due to the COVID-19 pandemic, I connected with <a class="text-blue-400" href="https://kodebaze.com/en" target="_blank">Kodebaze</a> on LinkedIn and began
+      my career with them as a Front-end Software Engineer. I had the opportunity to collaborate with a remote Danish
+      developer team and was deeply inspired by their talent, culture, and work ethic. Working with such amazing people
+      fueled my desire to continue working with talented individuals like them.</label>
+  </nz-timeline-item>
+  <nz-timeline-item [nzDot]="giftTemplate">
+    <h5>Apr-2021</h5>
+    <label>
+      I was promoted to the rank of SE 4/5 at TSDV, and was given the opportunity to lead a small team. It was a sweet
+      journey, as I had started at rank 1/5 and worked tirelessly for over 2 years to reach this position through my
+      contributions to the company.
+    </label>
+  </nz-timeline-item>
+  <nz-timeline-item nzColor="green">
+    <h5>Aug-2020</h5>
+    <label>
+      I was proud to be one of the first individuals to receive a certification in Azure Developer Associate at TSDV.
+      Alongside my colleagues, we trained and shared our knowledge with others to help them achieve their goals.
+    </label>
+  </nz-timeline-item>
+  <nz-timeline-item [nzDot]="crownTemplate">
+    <h5>Jun-2020</h5>
+    <label>
+      Led a team of two colleagues to win <a class="text-blue-400"
+                                             href="https://drive.google.com/file/d/17Xjb1nkTQ6VweIfXSoowMtvobvrwnEGG/view?usp=sharing">first
+      prize</a> in a hackathon competition, which featured 25 teams from
+      various departments and projects at TOSHIBA Software Development Viet Nam.
+    </label>
+  </nz-timeline-item>
+  <nz-timeline-item nzColor="blue" [nzDot]="dingTalkTemplate">
+    <h5>Jun-2019</h5>
+    <label>
+      After leaving VietIS Corporation, I began my career as a Software Engineer at <a class="text-blue-400" href="https://www.toshiba-tsdv.com/" target="_blank">Toshiba Development Vietnam (TSDV)</a>.
+      Working at a large corporation with a highly professional process left a strong impression on me. It was here that
+      I learned how to be an Engineer rather than just a Developer, and gained valuable insights into the product
+      development process in the software industry. Witnessing all the different aspects involved in creating a product
+      beyond just writing code left me in awe.
+    </label>
+  </nz-timeline-item>
+  <nz-timeline-item [nzDot]="starTemplate">
+    <h5>Jan-2019</h5>
+    <label>
+      During my time there, I was recognized for my outstanding
+      work with a <a class="text-blue-400"
+                     href="https://drive.google.com/file/d/1ghT61VL83HqVwTDyiIldy0i2NMPbklb7/view?usp=sharing">Talented
+      Engineer</a> award and was praised by my colleagues as a rising star.
+    </label>
+  </nz-timeline-item>
+
+  <nz-timeline-item nzColor="blue" [nzDot]="dingTalkTemplate">
+    <h5>Jul-2018</h5>
+    <label>I began my career as a C++ Developer at <a class="text-blue-400" href="https://vietis.com.vn/en/" target="_blank">VietIS Corporation</a> where I collaborated with developers from FUJITSU
+      Vietnam on operating system projects for their products.</label>
+  </nz-timeline-item>
+  <nz-timeline-item [nzDot]="bookTemplate">
+    <h5>Jun-2018</h5>
+    <label>I graduated with a Bachelor's Degree in Information Technology from <a class="text-blue-400" href="https://uet.vnu.edu.vn/en/" target="_blank">Vietnam National University</a>, which was
+      one of the best times of my life. Being a student there not only provided me with valuable knowledge, but also
+      allowed me to experience the thrill of chasing my dreams during my youthful years.</label>
+  </nz-timeline-item>
+</nz-timeline>
+<ng-template #starTemplate>
+  <span nz-icon nzType="star" nzTheme="fill"  class="text-2xl text-yellow-400"></span>
+</ng-template>
+<ng-template #nowTemplate>
+  <span nz-icon nzType="flag" nzTheme="twotone"  class="text-2xl"></span>
+</ng-template>
+<ng-template #crownTemplate>
+  <span nz-icon nzType="crown" nzTheme="fill"  class="text-2xl text-orange-400"></span>
+</ng-template>
+<ng-template #dingTalkTemplate>
+  <span nz-icon nzType="dingtalk" nzTheme="outline" class="text-2xl"></span>
+</ng-template>
+<ng-template #bookTemplate>
+  <span nz-icon nzType="book" nzTheme="twotone" class="text-2xl"></span>
+</ng-template>
+<ng-template #giftTemplate>
+  <span nz-icon nzType="gift" nzTheme="fill" class="text-2xl text-red-400"></span>
+</ng-template>
+<nz-back-top [nzVisibilityHeight]="100"></nz-back-top>
