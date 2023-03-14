@@ -6,6 +6,7 @@ export interface ICommentInfo {
   content: string;
   liked?: number;
   disliked?: number;
-  alreadyLike?: boolean;
   createdAt?: string;
+
+  alreadyLike?: boolean;
 }

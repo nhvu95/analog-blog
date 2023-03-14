@@ -1,6 +1,5 @@
 import {Client} from 'ts-postgres';
 import {IPostInfo} from "../models/post.model";
-import {ICommentInfo} from "../models/comment.model";
 import {client} from "./database";
 
 async function _likePost(postId: string, isIncrease = true): Promise<void> {

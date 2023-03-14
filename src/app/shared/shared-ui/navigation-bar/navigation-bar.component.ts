@@ -1,10 +1,9 @@
-import {Component, Input} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {Component, Inject, Input, PLATFORM_ID} from '@angular/core';
+import {CommonModule, isPlatformBrowser} from '@angular/common';
 import {NzAvatarModule} from 'ng-zorro-antd/avatar';
 import {NzMenuModule} from 'ng-zorro-antd/menu';
 import {NzButtonModule} from 'ng-zorro-antd/button';
 import {NzIconModule} from 'ng-zorro-antd/icon';
-import {RouterLink, RouterLinkActive} from '@angular/router';
 import {MenuItem} from "@models";
 import {NzDropDownModule} from "ng-zorro-antd/dropdown";
 
@@ -17,8 +16,6 @@ import {NzDropDownModule} from "ng-zorro-antd/dropdown";
     NzMenuModule,
     NzButtonModule,
     NzIconModule,
-    RouterLinkActive,
-    RouterLink,
     NzDropDownModule,
   ],
   templateUrl: './navigation-bar.component.html',
@@ -29,7 +26,11 @@ export class NavigationBarComponent {
   @Input() menus: MenuItem[] = [];
   @Input() subLogos: MenuItem[] = [];
 
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {
+  }
   openLink(link: string) {
-    window.open(link);
+    if (isPlatformBrowser(this.platformId)) {
+      window.open(link);
+    }
   }
 }

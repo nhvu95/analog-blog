@@ -1,4 +1,5 @@
 import {Client} from "ts-postgres";
+import {createApp} from "h3";
 
 const client = new Client({
   host: "192.168.1.50",
@@ -7,6 +8,10 @@ const client = new Client({
   password: "postgres",
   database: "blog"
 });
-client.connect();
 
-export {client};
+client.connect().then(() => {
+  // console.log("Connect to the database!")
+});
+const app = createApp();
+
+export {client, app};

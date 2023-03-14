@@ -20,16 +20,15 @@ export default defineConfig(({mode}) => ({
   },
   plugins: [analog({
     ssr: true,
-    static: true,
+    // static: true,
     entryServer: '/src/main.server.ts',
-    prerender: {
-      discover: true,
-      routes: async () => [
-        '/about-me',
-        '/creative',
-        '/career'
-      ],
-    },
+    // prerender: {
+    //   routes: async () => [
+    //     '/about-me',
+    //     '/creative',
+    //     '/career'
+    //   ],
+    // },
     vite: {
       inlineStylesExtension: 'scss',
       tsconfig:

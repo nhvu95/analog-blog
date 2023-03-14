@@ -1,5 +1,5 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {AsyncPipe, NgIf} from '@angular/common';
+import {Component, Inject, Input, OnInit, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
+import {AsyncPipe, isPlatformBrowser, NgIf} from '@angular/common';
 import {ContentFile, MarkdownComponent} from "@analogjs/content";
 import {Observable, take} from "rxjs";
 import {NzTypographyModule} from "ng-zorro-antd/typography";
@@ -25,16 +25,18 @@ export class PostComponent implements OnInit {
   // @ts-ignore
   @Input() post$: Observable<ContentFile<any>>;
 
-  constructor(private postServ: PostService) {
+  constructor(private postServ: PostService, @Inject(PLATFORM_ID) private platformId: any) {
   }
 
   ngOnInit() {
     this.post$.pipe(take(1)).subscribe(res => {
-      const state = localStorage.getItem(res.slug);
-      if (state) {
-        this._localState = JSON.parse(state);
-        this.liked = this._localState.like;
-        this.commented = this._localState.comment;
+      if (isPlatformBrowser(this.platformId)) {
+        const state = localStorage.getItem(res.slug);
+        if (state) {
+          this._localState = JSON.parse(state);
+          this.liked = this._localState.like;
+          this.commented = this._localState.comment;
+        }
       }
       this.postServ.viewPost(res.slug).subscribe();
     });
@@ -44,11 +46,15 @@ export class PostComponent implements OnInit {
     this.liked = !this.liked;
     this.postServ.likePost(slug, this.liked).subscribe(res => {
       this._localState.like = this.liked;
-      localStorage.setItem(slug, JSON.stringify(this._localState));
+      if (isPlatformBrowser(this.platformId)) {
+        localStorage.setItem(slug, JSON.stringify(this._localState));
+      }
     });
   }
 
   goToComment(): void {
-    window.scrollTo(0, document.body.scrollHeight);
+    if (isPlatformBrowser(this.platformId)) {
+      window.scrollTo(0, document.body.scrollHeight);
+    }
   }
 }

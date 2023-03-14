@@ -19,13 +19,8 @@ import {NzTypographyModule} from "ng-zorro-antd/typography";
   styles: [``],
   imports: [
     RouterOutlet,
-    NzPopoverModule,
     CreativeComponent,
-    LayoutComponent,
-    NzGridModule,
-    NzCardModule,
-    NzIconModule,
-    NzTypographyModule,
+    LayoutComponent
   ],
   providers: []
 })

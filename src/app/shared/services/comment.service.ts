@@ -7,18 +7,18 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class CommentService {
-
+  BASE_URL = "http://localhost:3000";
   constructor(private http: HttpClient) { }
 
-  comment(comment: ICommentInfo): Observable<void> {
-    return this.http.post<void>("/api/v1/comment", comment);
+  comment(_comment: ICommentInfo): Observable<any> {
+    return this.http.post<void>(  this.BASE_URL + `/api/v1/posts/${_comment.slug}/comments`, _comment);
   }
 
-  likeComment(comment: ICommentInfo): Observable<void> {
-    return this.http.put<void>("/api/v1/comment", {slug: comment.slug, id: comment.id, alreadyLike: comment.alreadyLike});
+  likeComment(comment: ICommentInfo): Observable<any> {
+    return this.http.put<any>(this.BASE_URL + `/api/v1/posts/${comment.slug}/comments/${comment.id}/like`, {"liked": comment.alreadyLike});
   }
 
   getAllComment(slug: string): Observable<ICommentInfo[]> {
-    return this.http.get<ICommentInfo[]>("/api/v1/comment", {params: {slug}});
+    return this.http.get<ICommentInfo[]>(this.BASE_URL +`/api/v1/posts/${slug}/comments`);
   }
 }

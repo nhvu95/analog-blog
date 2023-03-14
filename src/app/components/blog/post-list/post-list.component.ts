@@ -14,7 +14,6 @@ import {NzBackTopModule} from "ng-zorro-antd/back-top";
   selector: 'app-post-list',
   standalone: true,
   imports: [
-    RouterOutlet,
     CommonModule,
     HeaderComponent,
     SearchBarComponent,
@@ -61,9 +60,9 @@ export class PostListComponent implements OnInit {
   search(): void {
     const searchContent = this.currentSearch.trim().toLowerCase();
     const filterContent = this.currentFilter.trim().toLowerCase();
-    const mPost = this.posts.map(post => post.attributes)
-      .filter(post => this.currentSearch ? post.title.toLowerCase().includes(searchContent) : true)
-      .filter(post => this.currentFilter && this.currentFilter !== 'All' ? post.tags.findIndex(tag => tag.toLowerCase() === filterContent) >= 0 : true)
+    const mPost = this.posts.map(post => post?.attributes)
+      .filter(post => post && this.currentSearch ? post.title.toLowerCase().includes(searchContent) : true)
+      .filter(post => post && this.currentFilter && this.currentFilter !== 'All' ? post.tags.findIndex(tag => tag.toLowerCase() === filterContent) >= 0 : true)
       .sort((postA, postB) => postA.priority - postB.priority)
       .map(post => {
         if (this.postInfos.has(post.slug)) {

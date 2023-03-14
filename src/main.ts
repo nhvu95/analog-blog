@@ -7,20 +7,22 @@ import {AppComponent} from './app/app.component';
 import {NzIconModule} from "ng-zorro-antd/icon";
 import {importProvidersFrom} from "@angular/core";
 import {icons} from "./app/shared/shared-ui/icon";
-import {provideNoopAnimations} from "@angular/platform-browser/animations";
-import {CommonModule} from "@angular/common";
+import {
+  provideNoopAnimations
+} from "@angular/platform-browser/animations";
 import {provideContent, withMarkdownRenderer} from "@analogjs/content";
 import {provideHttpClient} from "@angular/common/http";
-import  'prismjs/components/prism-java';
+import 'prismjs/components/prism-java';
 import 'prismjs/themes/prism-okaidia.css';
+import {NzConfigService} from "ng-zorro-antd/core/config";
 
 bootstrapApplication(AppComponent, {
   providers: [
+    NzConfigService,
     provideFileRouter(),
-    provideContent(withMarkdownRenderer()),
-    CommonModule,
     provideHttpClient(),
     provideNoopAnimations(),
-    importProvidersFrom(NzIconModule.forRoot(icons))
-  ],
-});
+    importProvidersFrom(NzIconModule.forRoot(icons)),
+    provideContent(withMarkdownRenderer()),
+    ],
+}).catch((err) => console.error(err));

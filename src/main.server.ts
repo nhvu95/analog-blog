@@ -1,28 +1,13 @@
 import 'zone.js/node';
-import {enableProdMode, importProvidersFrom} from '@angular/core';
+// import 'zone.js/dist/zone-node';
 import {renderApplication, ɵSERVER_CONTEXT as SERVER_CONTEXT} from '@angular/platform-server';
+import {enableProdMode, importProvidersFrom} from '@angular/core';
 import {provideFileRouter} from '@analogjs/router';
 import {withEnabledBlockingInitialNavigation,} from '@angular/router';
 import {AppComponent} from './app/app.component';
-import {NzIconModule} from "ng-zorro-antd/icon";
-import {HttpClientModule, provideHttpClient, withJsonpSupport} from "@angular/common/http";
-import {CommonModule} from "@angular/common";
-import {icons} from "./app/shared/shared-ui/icon";
-import {NoopAnimationsModule} from "@angular/platform-browser/animations";
+import {provideHttpClient} from "@angular/common/http";
 import {provideContent, withMarkdownRenderer} from "@analogjs/content";
-
-
-// import "prismjs/plugins/toolbar/prism-toolbar";
-// import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
-// import "prismjs/components/prism-yaml";
-// import "prismjs/components/prism-css";
-// import "prismjs/components/prism-bash";
-// import "prismjs/components/prism-javascript";
-// import "prismjs/components/prism-java";
-// import "prismjs/components/prism-xml-doc";
-// import "prismjs/components/prism-json";
-// import "prismjs/components/prism-typescript";
-import  'prismjs/components/prism-java';
+import {NoopAnimationsModule} from "@angular/platform-browser/animations";
 
 if (import.meta.env.PROD) {
   enableProdMode();
@@ -34,13 +19,11 @@ export default async function render(url: string, document: string) {
     document,
     url,
     providers: [
-      {provide: SERVER_CONTEXT, useValue: 'ssr-analog'},
-      CommonModule,
-      NoopAnimationsModule,
       provideHttpClient(),
-      importProvidersFrom(NzIconModule.forRoot(icons)),
+      NoopAnimationsModule,
+      provideContent(withMarkdownRenderer()),
       provideFileRouter(withEnabledBlockingInitialNavigation()),
-      provideContent(withMarkdownRenderer())
+      {provide: SERVER_CONTEXT, useValue: 'ssr-analog'},
     ],
   });
 

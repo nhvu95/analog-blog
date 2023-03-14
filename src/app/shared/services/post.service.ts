@@ -5,19 +5,20 @@ import {IPostInfo} from "../../../server/models/post.model";
 
 @Injectable({providedIn:'root'})
 export class PostService {
+  BASE_URL = "http://localhost:3000";
   constructor(private http: HttpClient) {
   }
 
   likePost(postSlug: string, like: boolean): Observable<void> {
-   return this.http.put<void>("/api/v1/post", {postSlug, like});
+   return this.http.put<void>(this.BASE_URL+`/api/v1/posts/${postSlug}/like`, {});
   }
 
-  viewPost(postSlug: string): Observable<void> {
-    return this.http.put<void>("/api/v1/post", {postSlug, view:1});
+  viewPost(postSlug: string): Observable<any> {
+    return this.http.put<any>(this.BASE_URL+`/api/v1/posts/${postSlug}/view`, {});
   }
 
   getAll(): Observable<IPostInfo[]> {
-    return this.http.get<IPostInfo[]>("/api/v1/post");
+    return this.http.get<IPostInfo[]>(this.BASE_URL+"/api/v1/posts");
   }
 
 }
