@@ -5,7 +5,7 @@ import {IPostInfo} from "../../../server/models/post.model";
 
 @Injectable({providedIn:'root'})
 export class PostService {
-  BASE_URL = "http://localhost:4000";
+  BASE_URL = "https://blog.mindstone.cc";
   constructor(private http: HttpClient) {
   }
 
