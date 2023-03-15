@@ -7,7 +7,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class CommentService {
-  BASE_URL = "http://localhost:3000";
+  BASE_URL = "http://localhost:4000";
   constructor(private http: HttpClient) { }
 
   comment(_comment: ICommentInfo): Observable<any> {
