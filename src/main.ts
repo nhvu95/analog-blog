@@ -11,7 +11,10 @@ import {
   provideNoopAnimations
 } from "@angular/platform-browser/animations";
 import {provideHttpClient} from "@angular/common/http";
-import 'prismjs/components/prism-java';
+import 'prismjs';
+import 'prismjs/components/prism-yaml.js';
+import 'prismjs/components/prism-typescript.js';
+import 'prismjs/components/prism-java.js';
 import 'prismjs/themes/prism-okaidia.css';
 
 bootstrapApplication(AppComponent, {

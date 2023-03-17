@@ -11,7 +11,7 @@ export default defineConfig(({mode}) => ({
     target: ['es2020']
   },
   ssr: {
-    noExternal: ['ng-zorro-antd/**', '@ant-design/**']
+    noExternal: ['ng-zorro-antd/**', '@ant-design/**', 'prismjs/**']
   },
   resolve: {
     mainFields: ['module'],
