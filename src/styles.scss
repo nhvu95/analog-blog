@@ -151,56 +151,30 @@ span.icon {
   }
 }
 
-@media only screen and (max-width: 1470px) {
-  body, html {
-    font-size: 14px !important;
-  }
-  nhvu95-portfolio-blog {
-    .gutter-row {
-      @apply px-[20px] #{!important};
-    }
-    .blog-item-small .ant-card-body {
-      @apply px-[20px] #{!important};
-    }
-    .blog-item-large .ant-card-body {
-      @apply px-[30px] #{!important};
-    }
-    .blog-item-large .ant-card-meta-title {
-      @apply text-[35px] leading-tight #{!important};
-    }
+@media only screen and ( max-width: 1360px) {
+  nz-layout {
+    @apply px-[50px] max-w-none #{!important};
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  nhvu95-ws-portfolio-root {
-    @apply px-[80px] #{!important};
-  }
-  nhvu95-portfolio-blog {
-    .gutter-row {
-      @apply px-[20px] #{!important};
-    }
-    .blog-item-small .ant-card-body {
-      @apply px-[20px] #{!important};
-    }
-    .blog-item-small .ant-card-meta-title {
-      @apply text-[18px] leading-tight #{!important};
-    }
-    .blog-item-small .ant-card-meta-description {
-      @apply text-[14px] #{!important};
-    }
-  }
-  nhvu95-navbar .icons-list {
-    @apply hidden;
-  }
-
-  nhvu95-navbar .menu-list {
-    @apply flex;
+  nz-layout {
+    @apply px-[50px] max-w-none #{!important};
   }
 }
-
-@media only screen and (max-width: 992px){
-  nhvu95-ws-portfolio-root {
-    @apply px-[60px] #{!important};
+@media only screen and ( max-width: 1024px) {
+  nz-layout {
+    @apply px-[40px] max-w-none #{!important};
+  }
+}
+@media only screen and ( max-width: 768px) {
+  nz-layout {
+    @apply px-[30px] max-w-none #{!important};
+  }
+}
+@media only screen and ( max-width: 480px) {
+  nz-layout {
+    @apply px-[20px] max-w-none #{!important};
   }
 }
 

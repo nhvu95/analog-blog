@@ -14,11 +14,9 @@ import {provideContent, withMarkdownRenderer} from "@analogjs/content";
 import {provideHttpClient} from "@angular/common/http";
 import 'prismjs/components/prism-java';
 import 'prismjs/themes/prism-okaidia.css';
-import {NzConfigService} from "ng-zorro-antd/core/config";
 
 bootstrapApplication(AppComponent, {
   providers: [
-    NzConfigService,
     provideFileRouter(),
     provideHttpClient(),
     provideNoopAnimations(),

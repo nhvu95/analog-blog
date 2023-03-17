@@ -21,7 +21,7 @@ import {NzToolTipModule} from "ng-zorro-antd/tooltip";
     NzIconModule,
     NzButtonModule,
     NzStatisticModule,
-    NzToolTipModule
+    NzToolTipModule,
   ],
   templateUrl: "./about-me.component.html",
   styleUrls: ["./about-me.component.scss"],

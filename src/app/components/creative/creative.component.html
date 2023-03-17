@@ -1,5 +1,5 @@
 <div class="justify-center items-center h-[calc(100vh-250px)]" nz-row nzGutter="16">
-  <div nz-col nzSpan="8">
+  <div nz-col nzSpan="8" class="xs:max-md:hidden">
     <nz-card class="outer h-[19rem]" nzType="inner">
       <label class="font-semibold flex items-center justify-end">Cloudflare<span
         class="icon cloudflare scale-75 w-[50px] h-[50px] !mx-0"></span></label>
@@ -8,7 +8,17 @@
     </nz-card>
     <ng-container *ngTemplateOutlet="ec2Template"></ng-container>
   </div>
-  <div nz-col nzSpan="12">
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12" nzXXl="12" class="hidden mb-4 xs:max-md:!flex">
+    <nz-card class="outer w-full" nzType="inner">
+      <label class="font-semibold flex items-center justify-end">Cloudflare<span
+        class="icon cloudflare scale-75 w-[50px] h-[50px] !mx-0"></span></label>
+      <div class="flex">
+        <ng-container *ngTemplateOutlet="frontendDomainTemplate"></ng-container>
+        <ng-container *ngTemplateOutlet="backendDomainTemplate"></ng-container>
+      </div>
+    </nz-card>
+  </div>
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12" nzXXl="12">
     <nz-card class="outer h-[19rem]" nzType="inner">
       <label class="font-semibold flex items-center justify-end">Docker<span
         class="icon docker scale-[0.6] w-[50px] h-[50px] !mx-0"></span></label>
@@ -17,6 +27,9 @@
         <ng-container *ngTemplateOutlet="backendTemplate"></ng-container>
       </div>
     </nz-card>
+    <div class="hidden xs:max-md:!flex">
+      <ng-container *ngTemplateOutlet="ec2Template"></ng-container>
+    </div>
     <div class="flex gap-4">
       <ng-container *ngTemplateOutlet="githubTemplate"></ng-container>
       <ng-container *ngTemplateOutlet="npmTemplate"></ng-container>
@@ -25,18 +38,21 @@
 </div>
 
 <ng-template #frontendDomainTemplate>
-  <nz-card class="flex flex-col justify-between h-32 first-domain">
+  <nz-card class="flex flex-col justify-between h-32 first-domain xs:max-md:!h-24 xs:max-md:!w-1/2 xs:max-md:mr-1 after:xs:max-md:hidden">
     <ul>
       <li class="my-2">
-        <a class="flex items-center"><span class="mr-1" nz-icon nzTheme="outline"
+        <a class="block whitespace-nowrap text-ellipsis overflow-hidden"><span class="mr-1" nz-icon nzTheme="outline"
                                            nzType="link"></span>nhvu95.com</a>
       </li>
       <li class="my-2">
-        <a class="flex items-center"  href="https://soundmemos.nhvu95.com" target="_blank"><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span>soundmemos.nhvu95.com</a>
+        <a class="block whitespace-nowrap text-ellipsis overflow-hidden" href="https://soundmemos.nhvu95.com" target="_blank"><span class="mr-1" nz-icon
+                                                                                                nzTheme="outline"
+                                                                                                nzType="link"></span>soundmemos.nhvu95.com</a>
       </li>
       <li class="my-2">
-        <a class="flex items-center" href="https://f2f.nhvu95.com" target="_blank"><span class="mr-1" nz-icon nzTheme="outline"
-                                           nzType="link"></span>f2f.nhvu95.com</a>
+        <a class="block whitespace-nowrap text-ellipsis overflow-hidden" href="https://f2f.nhvu95.com" target="_blank"><span class="mr-1" nz-icon
+                                                                                         nzTheme="outline"
+                                                                                         nzType="link"></span>f2f.nhvu95.com</a>
       </li>
     </ul>
   </nz-card>
@@ -62,8 +78,9 @@
         <span class="icon angular w-[50px] h-[50px]"></span>
         <label class="block mx-auto text-sm text-center">Image hosting</label>
       </div>
-      <div (mouseover)="web = webs[3]" nzPopoverPlacement="topRight" [nzPopoverContent]="detailBodyTemplate" [nzPopoverTitle]="detailTitleTemplate"
-           nz-popover>
+      <div (mouseover)="web = webs[3]" [nzPopoverContent]="detailBodyTemplate" [nzPopoverTitle]="detailTitleTemplate"
+           nz-popover
+           nzPopoverPlacement="topRight">
         <span class="icon f2f w-[50px] h-[50px]"></span>
         <label class="block mx-auto text-sm text-center">F2F</label>
       </div>
@@ -72,10 +89,10 @@
 </ng-template>
 
 <ng-template #backendDomainTemplate>
-  <nz-card class="mt-2 second-domain" nzBordered>
+  <nz-card class="mt-2 second-domain xs:max-md:!h-24 xs:max-md:!mt-0 after:xs:max-md:hidden xs:max-md:!w-1/2 xs:max-md:ml-1" nzBordered>
     <ul>
       <li class="my-2">
-        <a class="block flex items-center"><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span>*.mindstone.com</a>
+        <a class="block whitespace-nowrap text-ellipsis overflow-hidden"><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span>*.mindstone.com</a>
       </li>
     </ul>
   </nz-card>
@@ -105,13 +122,13 @@
   </nz-card>
 </ng-template>
 <ng-template #ec2Template>
-  <nz-card class="mt-4 outer h-[10rem]" nzType="inner">
+  <nz-card class="mt-4 outer h-[10rem] xs:max-md:!w-full xs:max-md:h-[9rem]" nzType="inner">
     <label class="font-semibold flex items-center justify-end">EC2
       <span class="w-4 overflow-hidden w-[35px] ml-2">
-          <span class="icon aws scale-50 w-[100px] h-[50px]  origin-left"></span>
+          <span class="icon aws scale-50 w-[100px] h-[50px] origin-left"></span>
         </span>
     </label>
-    <nz-card class="item-bottom h-[7.2rem]">
+    <nz-card class="item-bottom h-[7.2rem] xs:max-md:h-[6.5rem]">
       <div class="mt-2">
         <span class="icon server w-[50px] h-[50px]"></span>
         <label class="block mx-auto text-sm text-center">TURN Server</label>
@@ -121,25 +138,27 @@
 </ng-template>
 
 <ng-template #githubTemplate>
-  <nz-card class="outer mt-4 w-full h-[10rem]" nzType="inner">
+  <nz-card class="outer mt-4 w-[calc(50%-0.5rem)] h-[10rem]" nzType="inner">
     <label class="font-semibold flex items-center justify-end">Github
       <span [nzType]="'github'" class="mx-4 text-24 !mr-2.5" nz-icon nzTheme="outline"></span>
     </label>
     <nz-card class="item-bottom" nzBordered>
       <ul>
         <li class="my-2">
-          <a class="flex items-center">
-                <span class="leading-normal" nz-icon nzTheme="outline" nzType="branches">
+          <a class="block whitespace-nowrap text-ellipsis overflow-hidden">
+                <span class="leading-normal" class="mr-1" nz-icon nzTheme="outline" nzType="branches">
                 </span>@anuglar/i18n - assemble
           </a>
         </li>
         <li class="my-2">
-          <a class="flex items-center"><span class="leading-normal" nz-icon nzTheme="outline"
-                                             nzType="branches"></span>@nhvu95/ebay-automation-tool</a>
+          <a class="block whitespace-nowrap text-ellipsis overflow-hidden">
+            <span class="leading-normal" class="mr-1" nz-icon nzTheme="outline"
+                  nzType="branches"></span>@nhvu95/ebay-automation-tool</a>
         </li>
         <li class="my-2">
-          <a class="flex items-center" href="https://github.com/nhvu95/angular-send-file-peer-to-peer">
-            <span class="leading-normal" nz-icon nzTheme="outline"
+          <a class="block whitespace-nowrap text-ellipsis overflow-hidden"
+             href="https://github.com/nhvu95/angular-send-file-peer-to-peer">
+            <span class="leading-normal" class="mr-1" nz-icon nzTheme="outline"
                   nzType="branches"></span>@nhvu95/send-file-peer-to-peer</a>
         </li>
       </ul>
@@ -147,16 +166,19 @@
   </nz-card>
 </ng-template>
 <ng-template #npmTemplate>
-  <nz-card class="outer mt-4 w-full h-[10rem]" nzType="inner">
+  <nz-card class="outer mt-4 w-[calc(50%-0.5rem)] h-[10rem]" nzType="inner">
     <label class="font-semibold flex items-center justify-end">npm
       <span class="w-4 overflow-hidden w-[60px] ml-2">
           <span class="icon npm scale-[0.6] w-[100px] h-[50px] origin-left"></span>
         </span></label>
     <nz-card class="item-bottom" nzBordered>
       <ul>
-        <li class="my-2"><a>@nhvu95/scully-plugin-emoji</a></li>
-        <li class="my-2"><a>@nhvu95/scully-plugin-scroll2section</a></li>
-        <li class="my-2"><a>@nhvu95/scully-plugin-lazydisplay</a></li>
+        <li class="my-2"><a
+          class="block whitespace-nowrap text-ellipsis overflow-hidden">@nhvu95/scully-plugin-emoji</a></li>
+        <li class="my-2"><a class="block whitespace-nowrap text-ellipsis overflow-hidden">@nhvu95/scully-plugin-scroll2section</a>
+        </li>
+        <li class="my-2"><a class="block whitespace-nowrap text-ellipsis overflow-hidden">@nhvu95/scully-plugin-lazydisplay</a>
+        </li>
       </ul>
     </nz-card>
   </nz-card>

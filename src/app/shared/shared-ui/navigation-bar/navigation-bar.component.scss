@@ -35,4 +35,42 @@
     //border-bottom: 0px;
     //outline: auto;
   }
+  .icons-list > * {
+    @apply mx-2;
+  }
 }
+
+
+@media only screen and ( max-width: 992px) {
+  #navbar {
+    @apply h-[70px];
+  }
+  .icons-list.invisible {
+    @apply hidden #{!important};
+  }
+
+  #btnContactMe {
+    @apply hidden #{!important};
+  }
+
+  #btnContactMeCircle {
+    @apply block #{!important};
+  }
+  .icons-list {
+    @apply items-center flex #{!important};
+  }
+  .icons-list > * {
+    @apply mx-1 #{!important};
+  }
+  .menu-list > li[nz-menu-item] {
+    @apply px-2 #{!important};
+  }
+  nz-avatar-group {
+    @apply w-auto h-auto #{!important};
+  }
+  nz-avatar {
+    @apply w-10 h-10 #{!important};
+  }
+}
+
+

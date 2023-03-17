@@ -17,18 +17,17 @@ $card-cover-img-size: 48.5%; // ~45.5%
 
   .ant-card-body {
     width: calc(100% - $card-cover-img-size);
-    @apply px-[55px] py-[18px] break-words flex flex-col #{!important};
+    @apply px-[55px] py-[18px] break-words flex flex-col xs:max-lg:px-[15px] #{!important};
     .blog-tag {
       @apply text-[18px] primary-color-300 #{!important};
     }
 
     .ant-card-meta-title {
-      @apply text-[40px] header-font dark-color whitespace-normal font-semibold limit-3line;
-      line-height: 54px;
+      @apply text-[40px] xs:max-lg:text-[30px] xs:max-sm:limit-4line leading-[54px] xs:max-sm:leading-normal header-font dark-color whitespace-normal font-semibold limit-3line;
     }
 
     .ant-card-meta-description {
-      @apply text-[18px] limit-3line;
+      @apply text-[18px] limit-4line xs:max-lg:limit-5line;
     }
 
     .blog-item-numbers .ant-statistic-content {

@@ -5,6 +5,15 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,html,scss}",
   ],
   theme: {
+    screens: {
+      'xs': '0px',
+      'sm': '576px',
+      'md': '768px',
+      'lg': '992px',
+      'xl': '1200px',
+      'xxl': '1400px',
+      // => @media (min-width: 1280px) { ... }
+    },
     extend: {
       padding: {
         '50px': '50px',
@@ -19,6 +28,10 @@ module.exports = {
       minWidth: {
         20: '5rem',
         24: '6rem',
+      },
+      maxWidth: {
+        '1/2': '50%',
+        '3/4': '75%'
       },
       height: {
         '50px': '50px',

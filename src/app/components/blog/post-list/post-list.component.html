@@ -4,10 +4,11 @@
   <div class="fake-input-shadow -top-8 !w-1/2 ml-1/4 h-16 absolute rounded-2xl z-0 w-full"></div>
 </div>
 <app-topic-filter [topics]="topicList" class="flex" (output)="currentFilter = $event; search()"></app-topic-filter>
-<app-post-list-item *ngIf="headPost" [content]="headPost" class="block mt-16 mb-[30px]" size="large"></app-post-list-item>
+<app-post-list-item *ngIf="headPost" [content]="headPost" class="block mt-16 mb-[30px] xs:max-md:hidden" size="large"></app-post-list-item>
+<app-post-list-item *ngIf="headPost" [content]="headPost" class="block mt-6 mb-6 hidden xs:max-md:!block" size="small"></app-post-list-item>
 
-<div [nzGutter]="{ xs: 16, sm: 24, md: 32, lg: 57 }" nz-row>
-  <div *ngFor="let post of postList" [nzSpan]="8" class="gutter-row mt-[35px] !px-6" nz-col>
+<div nz-row>
+  <div *ngFor="let post of postList" nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="8" nzXXl="8" class="gutter-row xs:max-md:!px-0 mt-[35px] px-6" nz-col>
     <div class="inner-box">
       <app-post-list-item [content]="post" class="block" size="small"></app-post-list-item>
     </div>

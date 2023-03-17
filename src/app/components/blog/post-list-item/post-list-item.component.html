@@ -55,7 +55,7 @@
             <span *ngIf="liked" [theme]="'fill'" nz-icon nzType="heart"></span>
           </button>
         </ng-template>
-        <nz-statistic [nzPrefix]="prefixComment" [nzSuffix]="'Comments'"
+        <nz-statistic [nzPrefix]="prefixComment" [nzSuffix]="'Comments'" class="xs:max-md:hidden"
                       [nzValue]="(content.comment ? content.comment : 0 | number)!"></nz-statistic>
         <ng-template #prefixComment><span nz-icon nzTheme="outline" nzType="comment"></span></ng-template>
         <!--        <label class="flex items-center mt-[4px] ml-auto">{{content.date | date}}</label>-->

@@ -2,15 +2,18 @@
   class="border-b-2">Vu Hieu </span><span>Nguyen</span>
 </h1>
 
-<div nz-row nzGutter="16">
-  <div nz-col nzSpan="8">
+<div nz-row nzGutter="16" class="items-end">
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="8" nzXXl="8" class="xs:max-xl:hidden">
     <ng-container *ngTemplateOutlet="leftPannel"></ng-container>
   </div>
-  <div nz-col nzSpan="8">
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="8" nzXXl="8" class="!h-[calc(100vh-330px)]">
     <ng-container *ngTemplateOutlet="centerPannel"></ng-container>
   </div>
-  <div nz-col nzSpan="8" class="flex flex-col items-start justify-between">
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="8" nzXXl="8" class="flex flex-col items-start justify-between xs:max-md:text-center xs:max-md:mt-4 description-center">
     <ng-container *ngTemplateOutlet="rightPannel"></ng-container>
+  </div>
+  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="8" nzXXl="8" class="mt-8 text-center mx-auto skill-center-all xl:hidden">
+    <ng-container *ngTemplateOutlet="leftPannel"></ng-container>
   </div>
 </div>
 

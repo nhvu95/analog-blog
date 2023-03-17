@@ -1,4 +1,4 @@
-import {Component, Inject, Input, PLATFORM_ID} from '@angular/core';
+import {Component, Inject, Input, PLATFORM_ID, ViewEncapsulation} from '@angular/core';
 import {CommonModule, isPlatformBrowser} from '@angular/common';
 import {NzAvatarModule} from 'ng-zorro-antd/avatar';
 import {NzMenuModule} from 'ng-zorro-antd/menu';
@@ -20,6 +20,7 @@ import {NzDropDownModule} from "ng-zorro-antd/dropdown";
   ],
   templateUrl: './navigation-bar.component.html',
   styleUrls: ['./navigation-bar.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NavigationBarComponent {
   @Input() logo = '';

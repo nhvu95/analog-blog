@@ -10,7 +10,7 @@ import {CommonModule} from "@angular/common";
   standalone: true,
   template: `
       <nz-layout class="!bg-transparent block px-[118px] max-w-[1706px] mx-auto">
-        <nz-header class="!h-[150px] !bg-transparent !px-0">
+        <nz-header class="!h-[150px] !bg-transparent !px-0 xs:max-md:!h-[100px]">
           <app-navbar [logo]="logo" [menus]="menus" [subLogos]="subLogos" class="mt-72"></app-navbar>
         </nz-header>
         <nz-content>

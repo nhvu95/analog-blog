@@ -11,3 +11,24 @@ app-about-me *:not(button, button *) {
 .ant-statistic-content-suffix{
   @apply ml-0;
 }
+
+.skill-center-all > div > div {
+  @apply flex flex-col;
+}
+.skill-center-all h5 {
+  @apply mx-auto;
+}
+
+.skill-center-all .ant-typography {
+  @apply mx-auto;
+}
+
+@media only screen and ( max-width: 1199px) {
+}
+@media only screen and ( max-width: 992px) {
+}
+@media only screen and ( max-width: 768px) {
+  .description-center button, .description-center .personal-stats {
+    @apply mx-auto my-4 #{!important};
+  }
+}
