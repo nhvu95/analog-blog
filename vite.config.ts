@@ -10,6 +10,9 @@ export default defineConfig(({mode}) => ({
   build: {
     target: ['es2020']
   },
+  ssr: {
+    noExternal: ['ng-zorro-antd/**', '@ant-design/**']
+  },
   resolve: {
     mainFields: ['module'],
     alias: [
@@ -21,13 +24,13 @@ export default defineConfig(({mode}) => ({
     ssr: true,
     // static: true,
     entryServer: '/src/main.server.ts',
-    // prerender: {
-      // routes: async () => [
-      //   '/about-me',
-      //   '/creative',
-      //   '/career'
-      // ],
-    // },
+    prerender: {
+      routes: async () => [
+        '/about-me',
+        '/creative',
+        '/career'
+      ],
+    },
     vite: {
       inlineStylesExtension: 'scss',
       tsconfig:
@@ -35,18 +38,18 @@ export default defineConfig(({mode}) => ({
           ? './tsconfig.spec.json'
           : './tsconfig.app.json',
     },
-    nitro: {
-      esbuild: {
-        options: {target:['es2020']}
-      },
-      prerender: {
-        // routes: [
-        //   '/about-me',
-        //   '/creative',
-        //   '/career'
-        // ]
-      },
-    },
+    // nitro: {
+    //   esbuild: {
+    //     options: {target:['es2020']}
+    //   },
+    //   prerender: {
+    //     routes: [
+    //       '/about-me',
+    //       '/creative',
+    //       '/career'
+    //     ]
+    //   },
+    // },
   }), tsconfigPaths()],
   test: {
     globals: true,

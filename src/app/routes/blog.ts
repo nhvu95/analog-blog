@@ -3,6 +3,7 @@ import {RouterOutlet} from "@angular/router";
 import {AboutMeComponent} from "../components/about-me/about-me.component";
 import {LayoutComponent} from "@shared";
 import {RouteMeta} from "@analogjs/router";
+import {provideContent, withMarkdownRenderer} from "@analogjs/content";
 
 export const routeMeta: RouteMeta = {
   title: 'Analog Blog',
@@ -22,7 +23,9 @@ export const routeMeta: RouteMeta = {
     AboutMeComponent,
     LayoutComponent,
   ],
-  providers: []
+  providers: [
+    provideContent(withMarkdownRenderer()),
+  ]
 })
 export default class AboutMePageComponent {
 }

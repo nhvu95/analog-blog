@@ -10,7 +10,6 @@ import {icons} from "./app/shared/shared-ui/icon";
 import {
   provideNoopAnimations
 } from "@angular/platform-browser/animations";
-import {provideContent, withMarkdownRenderer} from "@analogjs/content";
 import {provideHttpClient} from "@angular/common/http";
 import 'prismjs/components/prism-java';
 import 'prismjs/themes/prism-okaidia.css';
@@ -21,6 +20,5 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(),
     provideNoopAnimations(),
     importProvidersFrom(NzIconModule.forRoot(icons)),
-    provideContent(withMarkdownRenderer()),
     ],
 }).catch((err) => console.error(err));
