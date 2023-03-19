@@ -4,7 +4,6 @@ import {HeaderComponent, SearchBarComponent, TopicFilterComponent,} from '@share
 import {PostListItemComponent} from '../post-list-item/post-list-item.component';
 import {NzFormModule} from 'ng-zorro-antd/form';
 import {NzGridModule} from 'ng-zorro-antd/grid';
-import {RouterOutlet} from "@angular/router";
 import {injectContentFiles} from "@analogjs/content";
 import {PostMetadata} from "@models";
 import {PostService} from "../../../shared/services/post.service";
@@ -43,6 +42,7 @@ export class PostListComponent implements OnInit {
   postInfos: Map<String, { [name: string]: any }> = new Map<String, { [name: string]: any }>();
   currentSearch = '';
   currentFilter = '';
+
   constructor(private postServ: PostService) {
   }
 
@@ -63,7 +63,11 @@ export class PostListComponent implements OnInit {
     const mPost = this.posts.map(post => post?.attributes)
       .filter(post => post && this.currentSearch ? post.title.toLowerCase().includes(searchContent) : true)
       .filter(post => post && this.currentFilter && this.currentFilter !== 'All' ? post.tags.findIndex(tag => tag.toLowerCase() === filterContent) >= 0 : true)
-      .sort((postA, postB) => postA.priority - postB.priority)
+      .sort((postA, postB) => {
+        const pre = postA.priority - postB.priority;
+        if (pre != 0) return pre;
+        else return (new Date(postA?.date_end).getTime() - new Date(postB?.date_end).getTime()) < 0 ? 1 : -1;
+      })
       .map(post => {
         if (this.postInfos.has(post.slug)) {
           const val = this.postInfos.get(post.slug);

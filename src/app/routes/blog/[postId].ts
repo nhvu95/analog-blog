@@ -17,7 +17,7 @@ export const routeMeta: RouteMeta = {
   selector: 'app-blog-post-page',
   standalone: true,
   template: `
-    <app-post [post$]="post$"></app-post>
+    <app-post [post$]="post$" class="block xs:max-md:px-4 md:max-lg:px-16 lg:max-xl:px-24 px-32"></app-post>
   `,
   styles: [``],
   imports: [
