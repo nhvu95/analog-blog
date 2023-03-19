@@ -29,7 +29,7 @@ import {CommonModule} from "@angular/common";
 })
 export class LayoutComponent implements OnInit {
   title = 'portfolio';
-  logo = '/icons/favicon-196x196.png';
+  logo = '/icons/favicon-196x196.svg';
   subLogos: MenuItem[] = [
     {label: 'linkedin', link: `https://www.linkedin.com/in/nhvu95/`},
     {label: 'github', link: `https://github.com/nhvu95`},
