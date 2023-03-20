@@ -1,5 +1,5 @@
 ---
-## title: 'Preparing for a front-end interview'
+title: 'Preparing for a front-end interview'
 description: "Soon, I will join an interview for the frontend position. This note is used to list and keep what I will
 learn and exercise."
 date_start: "2022/02/18"
