@@ -27,6 +27,7 @@ export class NavigationBarComponent {
   @Input() menus: MenuItem[] = [];
   @Input() subLogos: MenuItem[] = [];
 
+
   constructor(@Inject(PLATFORM_ID) private platformId: any) {
   }
   openLink(link: string) {

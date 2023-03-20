@@ -62,16 +62,17 @@ ngay 🤣
 
 ## II. Tại sao post này ra đời?
 
-Có lẽ đây mới là phần nội dung chính của bài viết này. Bài viết này để tổng kết và đúc rút những process mà mình đã may
-mắn được gặp trong quá khứ và hiện tại, những cái hay mà mình cảm thấy hay và những cái dở mà mình cảm thấy dở trong quy
-trình phát triển phần mềm ở các công ty trong vỏn vẹn mấy năm làm nghề.
-Mới vài năm làm nghề thì có gì mấy để mà nói nhỉ ? 🤣 Kệ chứ, có thể tại thời điểm này mình chưa thấy nó hay, cũng có thể
-sau vài năm nữa mình mới cảm được nó. Nhưng đó sẽ là một câu chuyện khác với nội dung khác, biết đâu lúc đó mình sẽ quay
-lại update bài viết này thì sao. Kệ đi, vì đó sẽ là truyện của tương lai.
+Qua một vài năm đi làm, thật may mắn khi mình có cơ hội được làm việc với những công ty khác nhau, những dự án khác
+nhau, với những quy trình khác nhau. Cũng như những lập trình viên khác, mình cũng có những thời điểm cảm thấy có những
+thứ mà quy trình hiện tại làm chưa tốt hoặc có thể làm tốt hơn. Những điều bất ổn này đã được góp ý cho team và chúng
+mình cùng nhau đưa ra các biện pháp xử lý, hoặc chí ít những người anh, người chị leader của mình đã đưa được ra những
+action xử lý chúng.
 
-Tất nhiên những câu chuyện kể ở đây sẽ không phải kiểu "Có vấn đề sao không báo với quản lý cấp cao đi, đăng lên đây làm
-gì?". Tất nhiên những gì mình cảm thấy không ổn đã được báo và góp ý ngay từ trong quá khứ rồi 💁 Những gì còn ở đây chỉ
-là kỉ niệm, và như mình vừa nói "để tổng kết và đúc rút.🙈"
+Rồi một ngày mình cũng sẽ có 1 team cho riêng mình, hoặc hơn thế, mình sẽ có một công ty cho riêng mình, mình sợ rằng
+lúc
+đó mình sẽ quên những bài học mà chúng mình đã từng gặp phải. Post này để note lại những điểm hợp lý và bất hợp lý trong
+các quy trình mà mình đã từng làm việc, để trong tương lai khi nhìn lại, mình sẽ đúc rút được 1 quy trình hợp lý cho
+riêng mình
 
 ### Một startup product nhỏ (trước 2018)
 
@@ -205,7 +206,7 @@ theo.
 **Hệ quả là**
 
 - Lúc ban đầu các User story của bọn mình làm thuần scrum, tức là trong cả 1 cái user story to dùng chỉ vỏn vẹn có đúng
-  dòng chữ As a [persona], I [want to], [so that]. Ai làm dev cũng biết rằng nếu chỉ đơn giản như vậy, PO sẽ phải trả
+  dòng chữ "As a [persona], I [want to], [so that]." Ai làm dev cũng biết rằng nếu chỉ đơn giản như vậy, PO sẽ phải trả
   lời hàng tá các câu hỏi từ dev, test. Và trong suốt quá trình, rework là điều chắc chắn sẽ xảy ra vì miss
   understanding. Và bởi vì 1 user story đơn giản như vậy nên cũng không có definition of done, việc done 1 user sẽ do PO
   quyết định. Thi thoảng nó sẽ bị nhét thêm 1 tỷ thứ mới mẻ vào, thứ mà đáng nhẽ ra nên tách thành 1 user story mới,
@@ -231,15 +232,20 @@ theo.
   date vô hạn, thêm tính năng mới khiến cho mình cảm thấy rằng mọi thứ đều được respect trừ plan đề ra ngay từ đầu.
 - Test 1 ở branch, sau khi merge vào master thực hiện tiếp test 2 ở master, và tiếp đến là test 3 ở release branch. Nhìn
   thì có vẻ quy trình test khá kỹ, mỗi khi merge vào master và phát hiện bug, phải tiếp tục fix trên branch và merge
-  tiếp vào
-  master. Bug có trên master là điều thường xảy ra.
+  tiếp vào master. Bug có trên master là điều thường xảy ra luôn.
 
 ### Tổng kết
 
-**Vậy có process nào hoàn hảo không?**
+Qua một đống thứ mình vừa liệt kê bên trên, khi nhìn vào chúng ta sẽ nghĩ, vậy trong đống bên trên có process nào là oke
+nhất?
+Không, theo mình chẳng có cái nào là ok nhất cả.
+
+**Vậy đâu đó trên đời, có tồn tại một process nào hoàn hảo không?**
 Không, process cũng giống như con người, chẳng có gì là hoàn hảo cả. Hay nói một cách chính xác hơn rằng chẳng có gì
 sinh ra đã
-hoàn hảo, chỉ có theo thời gian, sau nhiều lần tự sửa đổi mà trở nên hoàn hảo hơn.
+hoàn hảo, chỉ có theo thời gian, sau nhiều lần tự sửa đổi mà trở nên hoàn hảo hơn. Cũng chẳng có thể có một process có
+thể áp dụng cho tất cả mọi team, mọi dự án, chúng ta chỉ có những quy trình chuẩn (Agile - Scrum, Walterfall ..), sau đó
+tùy vào team size, tình huống, bài toán khác nhau, tự đưa ra những tùy chỉnh khác nhau để chở nên phù hợp hơn.
 
 **Vậy cái gì là quan trọng nhất trong 1 process?**
 Theo mình chính là thái độ và sự tôn trọng.
@@ -256,6 +262,7 @@ Nói ngắn gọn hơn, tôn trọng những gì chúng ta đề ra, tôn trọn
 ta sắp làm.
 
 **Vậy cái gì tệ hơn code tệ?**
-Theo suy nghĩ của mình, cái tệ hơn code tệ chính là những dòng code đó nằm trong một process tệ, nơi mà người viết ra nó
-không thể trở nên hoàn thiện hơn, nơi mà chất lượng của sản phẩm được tạo ra từ những dòng code đó không thể ngày một
+Sau tất cả để tổng kết lại bài viết này thì theo mình, cái tệ hơn code tệ chính là những dòng code đó nằm trong một
+process tệ, nơi mà người viết ra nó
+không thể trở nên hoàn thiện hơn, nơi mà chất lượng của sản phẩm được tạo ra không thể ngày một
 tốt hơn, và cuối cùng chính là bản thân những dòng code đó sẽ không bao giờ có cơ hội được sửa để hoàn hảo hơn.
