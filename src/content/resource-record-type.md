@@ -9,7 +9,7 @@ header_image: 'https://dsm01pap001files.storage.live.com/y4mr0A2sU5Tv0Wc5xrTCr6T
 tags: ['DevOps','DNS','Net', 'Did-I-Miss']
 priority: 1
 link: '/blog/dns-resource-type'
-slug: dns-resource-type
+slug: resource-record-type
 location: 'Hanoi, Vietnam'
 ---
 

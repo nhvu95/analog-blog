@@ -1,7 +1,6 @@
 ---
-## title: 'Preparing for a front-end interview'
-description: "Soon, I will join an interview for the frontend position. This note is used to list and keep what I will
-learn and exercise."
+title: 'Preparing for a front-end interview'
+description: "Soon, I will join an interview for the frontend position. This note is used to list and keep what I will learn and exercise."
 date_start: "2022/02/18"
 date_end: '2022/02/19'
 published: true
@@ -26,16 +25,14 @@ location: 'Hanoi, Vietnam'
 **understand them, and also take your appreciation at that time :smile: Let's learn together!.**
 **During the reading, please don’t hesitate to notify me of misleading information if you spot a misunderstanding!**
 
-1. [*Base web knowledge.*](#i-base-web-knowledge)
-
+1. [**Base web knowledge.**](#i-base-web-knowledge)
 * [Session, Cookie, Cache.](#1-session-cookie-cache)
 * [Web Storage](#2-web-storage)
 * [Cors](#3-cors)
 * [RESTful API](#4-restful-api)
 * [SSL](#5-ssl---secure-sockets-layer)
 
-2. [*Javascript.*](#ii-javascript)
-
+2. [**Javascript**.](#ii-javascript)
 * [How JS work?](#1-how-js-work)
 * [Concurrency & Event Loop](#2-concurrency--the-event-loop)
 * [Promise & Async/Await](#3-promise--asyncawait)
@@ -46,8 +43,7 @@ location: 'Hanoi, Vietnam'
 * [Web worker / Service Worker / Worklets](#8-web-worker---service-worker---worklets)
 * [DOM / Shadow Dom / Virtual Dom](#9-dom--shadow-dom--virtual-dom)
 
-3. [*Angular*](#iii-angular)
-
+3. [**Angular**](#iii-angular)
 * [Dependency Injection](#1-dependency-injection)
 * [View Engine](#2-view-engine)
 * [Change Detection - NgZone](#3-change-detection---ngzone)
@@ -57,12 +53,12 @@ location: 'Hanoi, Vietnam'
 * [Content Projection](#7-content-projection)
 * [RxJS](#8-rxjs)
 * [State Management. Stateless, Stateful, Dumb, Smart.](#9-state-management)
-* Webpack & Custom Webpack
-* Optimize
-* Performance Handling
-* CI/CD
-* Scalable Design
-* Deploy
+* [Webpack & Custom Webpack](#10-webpack--custom-webpack)
+* [Optimize](#11-optimize)
+* [Performance Handling](#12-performance-handling)
+* [CI/CD](#13-cicd)
+* [Scalable Design](#14-scalable-design)
+* [Deploy](#15-deploy)
 
 Before going deeply into each section, I want to appreciate my thanks to the sources below, which I usually read, and
 also use some content from them for this post.
@@ -70,21 +66,23 @@ also use some content from them for this post.
 <details>
    <summary><b><u>Sources:</u></b></summary>
 
-[**0. Angular Homepage**](https://angular.io/)
+[*0. Angular Homepage*](https://angular.io/)
 [**1. Series How JS work - Sessionstack team**](https://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)
 [*2. Javascript Interview Question - sudheerj*](https://github.com/sudheerj/javascript-interview-questions)
 [*3. 100 Days of Angular - Angular Vietnam*](https://github.com/angular-vietnam/100-days-of-angular)
 [*4. What-Are-Cookies - Clouldflare*](https://www.cloudflare.com/learning/privacy/what-are-cookies/)
-[**5. What is ‘CORS’? What is it used for? - Electra Chong**](https://medium.com/@electra_chong/what-is-cors-what-is-it-used-for-308cafa4df1a)
+[*5. What is ‘CORS’? What is it used for? - Electra Chong*](https://medium.com/@electra_chong/what-is-cors-what-is-it-used-for-308cafa4df1a)
 [*6. API - REST - RESTfulAPI - Wiki*](https://en.wikipedia.org/wiki/Representational_state_transfer)
-[**7. Uniform interface REST - inferno**](https://stackoverflow.com/questions/25172600/rest-what-exactly-is-meant-by-uniform-interface)
+[*7. Uniform interface REST - inferno*](https://stackoverflow.com/questions/25172600/rest-what-exactly-is-meant-by-uniform-interface)
 [*8. Type Coercion*](https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/)
-[**9. Prototype & Prototype chain**](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+[*9. Prototype & Prototype chain*](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 [*10. Closures & Lexical scoping*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures?retiredLocale=vi)
 [*11. Webworkers*](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 [*12. View Engine*](https://immanubhardwaj.medium.com/renderer2-angular-view-engine-d872498be1e6)
-[**13. Angular Change Detection Strategy: An introduction?**](https://medium.com/@bencabanes/angular-change-detection-strategy-an-introduction-819aaa7204e7)
-[**14. Stateless and Stateful**](https://michelestieven.medium.com/components-stateful-stateless-dumb-and-smart-2847dd4092f2)
+[*13. Angular Change Detection Strategy: An introduction?*](https://medium.com/@bencabanes/angular-change-detection-strategy-an-introduction-819aaa7204e7)
+[*14. Stateless and Stateful*](https://michelestieven.medium.com/components-stateful-stateless-dumb-and-smart-2847dd4092f2)
+[*15. Webpacck*](https://webpack.js.org/concepts/)
+[*16. Performance issues*](https://christianlydemann.com/how-to-fix-the-most-common-angular-performance-problems-like-a-doc/)
 </details>
 
 ## I. Base web knowledge
@@ -174,11 +172,11 @@ the [Same-Origin Policy (SOP)](#same-origin-policy-sop).
 
 #### Same-Origin Policy (SOP)
 
-> At the crux of it, **CORS and SOP are both browser policies** that have developed in response to issues of browser  
-> security and vulnerabilities.  
-Did you ever hear about CSRF (Cross-Site Request Forgery) or XSRF? Same-Origin Policy was born to prevent that.
+> At the crux of it, **CORS and SOP are both browser policies** that have developed in response to issues of browser security and vulnerabilities.
+> Did you ever hear about CSRF (Cross-Site Request Forgery) or XSRF? Same-Origin Policy was born to prevent that.
+> Before browsers implemented SOP, malicious websites were able to exploit cookies stored by your browser to make unauthorized requests to other domains.
 
-> Before browsers implemented SOP, malicious websites were able to exploit cookies stored by your browser to make unauthorized requests to other domains. Some of these unauthorized requests could do things like make purchases, delete user information, fetch sensitive data, etc. 😱The **Same-Origin Policy** is a security measure standardized among browsers. The "origin" mostly refers to a "domain".  
+> Some of these unauthorized requests could do things like make purchases, delete user information, fetch sensitive data, etc. 😱The **Same-Origin Policy** is a security measure standardized among browsers. The "origin" mostly refers to a "domain".  
 > It prevents different origins from interacting with each other, to prevent attacks such as Cross Site Request Forgery.  
 -**_Of course, SOP cannot prevent all the CSRF attack, but atleast It can prevent CSRF in some case._**
 
@@ -490,8 +488,7 @@ async function getNumber3() {
 
 ### 4. Type Coercion
 
-> Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to  
-> numbers).
+> Type coercion is the automatic or implicit conversion of values from one data type to another (such as strings to numbers).
 
 ```javascript
 const value1 = '5';
@@ -540,14 +537,12 @@ String(false)                 // 'false'
 
 ```javascript
 Boolean(2)          // explicit
-if (2) { ...
-}      // implicit due to logical context
+if (2) {...}      // implicit due to logical context
 !!2                 // implicit due to logical operator
 2 || 'hello'        // implicit due to logical operator
 ```
 
-> Note: Logical operators such as `||` and `&&` do boolean conversions internally, but actually return the value of  
-> original operands, even if they are not boolean.
+> Note: Logical operators such as `||` and `&&` do boolean conversions internally, but actually return the value of original operands, even if they are not boolean.
 
 ```javascript
 Boolean('')           // false
@@ -1233,7 +1228,7 @@ Renderer2 offers two variants of code compilation:
 
 | AOT                                                      | JIT                                                                                         |
 |----------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| 1. When you run build -- prod                            | 1. When you run ng build / ng serve
+| 1. When you run build -- prod                            | 1. When you run ng build / ng serve                                                         |
 | 2. Compliation take place at the time you run build      | 2. The compliation is done in the browser                                                   |
 | 3. Smaller build size since complier not send to browser | 3. Fairly greater build size since the complier is shipped to browser for compliation later |
 | 4. Suitable for product build                            | 4. Suitable for local development                                                           |
@@ -1513,20 +1508,148 @@ suitable.
 > parent it belong to). Vice versa, a smart component has dependencies! It means that it knows where he is, it knows that he’s part of a bigger application. It is aware of its surroundings. It’s a living thing. Sort of.
 
 ### 10. Webpack & Custom webpack
-Some Angular developer work with angular for a few years but never touch or and think about webpack.
+Some Angular developer work with angular for a few years but never touch or and think about webpack. When you want to understand more about Angular, you have to understand about webpack.
 
-1. What is webpack?
-2. Why
-3. When & Where
-4. Who
-5. How to custom webpack?
+#### 10.1 What is webpack?
+
+First as usually, we will take a look at definition and some main points of webpack on the home page.
+
+> At its core, webpack is a static module bundler for modern JavaScript applications.
+>
+> When webpack processes your application, it internally builds a dependency graph from one or more entry points.
+>
+> ...then combines every module your project needs into one or more bundles, which are static assets to serve your content from
+
+#### 10.2 Why
+
+Do you like history? I like it, by understand the circumstance Webpack was born, you will get more understand the reason why
+
+>There are two way to run java scrip in a browser.
+>
+>First, include a script for each functionality; 👉 This solution is hard to scale because loading too many script can cause network bottleneck.
+>
+>The second option is to use a big `.js` file containing all your project code 👉 but this leads to problems in scope, size, readability, and maintainability.
+
+**And then IIFEs came.**
+
+>IIFEs solve scoping issues for large projects; when script files are wrapped by an IIFE, you can safely concatenate or safely combine files without worrying about scope collision.
+>
+>The use of IIFEs led to tools like Make, Gulp, Grunt, Broccoli or Brunch. These tools are known as task runners, and they concatenate all your project files together.
+>
+>However, changing one file means you have to rebuild the whole thing. Concatenating makes it easier to reuse scripts across files but makes build optimizations more difficult. **How can you find out if code is actually being used or not?**
+>
+>Even if you only use a single function from lodash, you have to add the entire library and then squish it together. How do you treeshake the dependencies on your code? Lazy loading chunks of code can be hard to do at scale and requires a lot of manual work from the developer.
+
+**Birth of JavaScript Modules happened thanks to Node.js**
+
+>Webpack runs on Node.js, a JavaScript runtime that can be used in computers and servers outside a browser environment.
+>
+>When Node.js was released a new era started, and it came with new challenges. Now that JavaScript is not running in a browser, how are Node applications supposed to load new chunks of code? There are no html files and script tags that can be added to it.
+>
+>CommonJS came out and introduced require, which allows you to load and use a module in the current file. This solved scope issues out of the box by importing each module as it was needed.
+>
+>**But there is no browser support for CommonJS**. There are no live bindings. There are problems with circular references. Synchronous module resolution and loading is slow. While CommonJS was a great solution for Node.js projects, browsers didn't support modules, so bundlers and tools like Browserify, RequireJS and SystemJS were created, allowing us to write CommonJS modules that run in a browser.
+>
+>The good news for web projects is that modules are becoming an official feature in the ECMAScript standard. However, browser support is incomplete and bundling is still faster and currently recommended over these early module implementations.
+>
+>Old school Task Runners and even Google Closure Compiler requires you to manually declare all dependencies upfront. While bundlers like webpack automatically build and infer your dependency graph based on what is imported and exported. This along with other plugins and loaders make for a great developer experience.
+
+**Wouldn't it be nice…**
+
+>...to have something that will not only let us write modules but also support any module format (at least until we get to ESM) and handle resources and assets at the same time?
+>
+>**This is why webpack exists. It's a tool that lets you bundle your JavaScript applications (supporting both ESM and CommonJS), and it can be extended to support many different assets such as images, fonts and stylesheets.**
+>
+>Webpack cares about performance and load times; it's always improving or adding new features, such as async chunk loading and prefetching, to deliver the best possible experience for your project and your users.
+
+#### 10.3 How webpack work?
+
+- From your `.js`, `.css`, and assets files, webpack builds a dependency graph. 
+- In this graph, there could be one or more entry points. (`./src/index.js`)
+- And then webpack push and combine every module your project needs into one or more bundles (include `css`, statics files like .img they all push or loaded in these bundles `.js`).
+- During push and combine these modules, webpack use some technique like tree-shaking or etc, to remove unused scripts and keep only used.
+- These bundles can be load directly at init time or lazy load depends on you. What ever, because of dependency graph, they are always loaded in order.
+
+After read basicly about webpack, I decide that I will I go deep on it and write a detail post about it >here< (If you don't see it, it means that I did notthing)
+
+#### 10.4 How to custom webpack in Angular?
+
+By default webpack is used by Angular and wrap inside Angular schematics, these command like (`ng-build`, `ng serve`) are use webpack. Angular allows us to configure some common basic flags through `angular.json` file instead of access webpack directly. However, We can custom webpack by use custom builders.
+1. The command `npm i @angular-builders/custom-webpack -D` will help you to install this package.
+2. In `angular.json` change the `@angular-devkit/build-angular:browser` builder to `@angular-builders/custom-webpack:browser`
+Please remember that, if you use `@angular/universal` you can replace it by `@angular-builders/custom-webpack:server`. And add the `customWebpackConfig` inside `options`
+
+```json
+"architect": {
+    ...
+    "build": {
+        "builder": "@angular-builders/custom-webpack:browser"
+        "options": {
+            "customWebpackConfig": {
+               "path": "./extra-webpack.config.js"
+            }  
+            ...
+        }
+    ...
+}
+```
+
+3. Then create a new `extra-webpack.config.js` files in /root
+
+```javascript
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.cool$/,
+        use: 'cool-loader'
+      }
+    ]
+  }
+};
+```
+If you need more advance, you can export a function instead.
+
+```javascript
+const webpack = require('webpack');
+const pkg = require('./package.json');
+
+module.exports = (config, options) => {
+  config.plugins.push(
+    new webpack.DefinePlugin({
+      'APP_VERSION': JSON.stringify(pkg.version),
+    }),
+  );
+
+  return config;
+};
+```
+You can refer the `@angular-builders/custom-webpack` documents to [read them all](https://www.npmjs.com/package/@angular-builders/custom-webpack)
 
 ### 11. Optimize
 
+I wrote a post about loadtime [here](https://nhvu95.com/blog/reduce-load-time)
+
 ### 12. Performance handling
 
-### 13. CI/CI
+Besides optimize website loading time, bellows are some cases make your angular app slow.
 
-### 14. Scalable design
+1. Too much unnecessary change detection triggering making the app slow.(Keywords: On Push, Pure Pipe, trackBy in ngFor, Detach change detection ...)
+2. Too much boostrap logic. (EX: A tons of things inside constructor / services then all are inject in 'root')
+3. Memory leaks. All the bad things that can happen in `.js` can happen in `.ts`, (closure, scope chain, ...etc - check dev tools)
+4. Subscribe until you die. (unsubscribe, takeUntil, async pipe)
+
+### 13. CI/CD
+
+Circle CI, Travis CI, Jenkin.
+
+### 14. Scalable design.
+
+Always remember that `package by features`, should not `package by layers`. Refer to John Papa's design structure, SOLID, DRY, and tons of things else.
+Use some command design patterns like COMMANDERs, and DI. Consider mono repo, or micro-frontend if your team size is big.
 
 ### 15. Deploy
+
+There are two ways to deploy.
+1. Deploy as static page: Nginx or any services avaiable on the internet (github page, netlify, static-page azure.. etc)
+2. Deploy as server: Use for `SSR`, you can run it in `VPS` or `Docker` with `Nodejs`. You can use `ng serve` for production but you should not do that because `ng serve` use `webpack-dev-server` that is build for development only.

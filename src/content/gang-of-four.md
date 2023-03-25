@@ -9,7 +9,7 @@ header_image: 'https://i.imgur.com/TGeCfBM.jpg'
 tags: ['Today I Learned']
 priority: 0
 link: /blog/algo-dynamic-programming
-slug: algo-dynamic-programming
+slug: gang-of-four
 location: 'Hanoi, Vietnam'
 ---
 

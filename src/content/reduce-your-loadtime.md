@@ -8,8 +8,8 @@ image: 'https://i.imgur.com/syl1NsF.png'
 header_image: 'https://i.imgur.com/rkyvoO6.png'
 tags: ['Frontend','SEO','Tips', 'Did I Miss']
 priority: 0
-link: '/blog/reduce-load-time'
-slug: reduce-load-time
+link: '_blog_reduce-load-time'
+slug: 'reduce-your-loadtime'
 location: 'Phutho, Vietnam'
 ---
 
@@ -161,6 +161,11 @@ for example
     <img src="https://i.imgur.com/ZrZYNL1.png" alt="Lighthouse performance"/>
 </figure>
 
+3. **Prerender in the server or prerender at building time**
+Yes, I'm talking about SSR and SSG. Two of these techniques will help you reduce your website loading time; the bundles' size will be smaller, and because HTML is already pre-rendered, so browsers are much easier to display.
+
+SSR: Stands for Server side rendering, all your Frontend App / or some parts will be render at the backend then return html instead.
+SSG: Stands for Static site generation, all your frontend app or some parts will be render at the building time.
 
 [1]: https://compresspng.com/
 [2]: https://www.iloveimg.com/resize-image
