@@ -1,0 +1,12 @@
+version: '3.8'
+name: blog-client-container
+services:
+    blog-client: 
+        image: blog-client:latest
+        restart: unless-stopped
+        ports:
+            - '3000:3000'
+networks:
+    default:
+      name: tunnel
+      external: true
