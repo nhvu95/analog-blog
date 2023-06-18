@@ -7,7 +7,7 @@ published: false
 image: 'https://i.imgur.com/hlAfXAK.png'
 header_image: 'https://i.imgur.com/TGeCfBM.jpg'
 tags: ['Today I Learned']
-priority: 0
+priority: 1
 link: /blog/algo-dynamic-programming
 slug: gang-of-four
 location: 'Hanoi, Vietnam'

@@ -7,7 +7,7 @@ published: true
 image: 'https://i.imgur.com/obXzV6h.png'
 header_image: 'https://i.imgur.com/bF64W2L.png'
 tags: ['ZeroCode','Did I Miss','Vietnam','TDD']
-priority: 0
+priority: 1
 link: '/blog/tdd-test-driven-development'
 slug: tdd-test-driven-development
 location: 'Hanoi, Vietnam'

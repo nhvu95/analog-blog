@@ -6,7 +6,7 @@ date_end: '2022/01/01'
 published: true
 image: 'https://i.imgur.com/driRgww.png'
 header_image: 'https://i.imgur.com/LGxkTwi.png'
-tags: ['Backend','SpringBoot', 'Did-I-Miss']
+tags: ['Backend','SpringBoot', 'Did I Miss']
 priority: 1
 link: '/blog/spring-core-1'
 slug: spring-core-1

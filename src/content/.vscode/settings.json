@@ -1,0 +1,9 @@
+{
+    "grammarly.selectors": [
+        {
+            "language": "markdown",
+            "scheme": "file",
+            "pattern": "rumors-lazy-loading-and-security.md"
+        }
+    ]
+}
