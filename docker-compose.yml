@@ -2,7 +2,8 @@ version: '3.8'
 name: blog-client-container
 services:
     blog-client: 
-        image: blog-client:latest
+        build: .
+        image: "blog-client"
         restart: unless-stopped
         ports:
             - '3000:3000'

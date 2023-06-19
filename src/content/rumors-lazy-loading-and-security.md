@@ -1,15 +1,15 @@
 ---
 title: 'Confirming rumors. Does lazy loading impact security?'
 description: "Recently, I was asked a question during an interview by a French SA that got me thinking: \"Does lazy-loading impact security?\" Initially, my answer was no. However, the interviewer brought up an interesting point: sometimes, users have to authenticate before loading the remaining modules through lazy-loading. This is better than loading everything at the initial loading time."
-date_start: '2023/01/01'
-date_end: '2023/03/11'
+date_start: '2023/06/01'
+date_end: '2023/06/11'
 published: true
 image: 'https://i.imgur.com/hPfE5Py.jpg'
 header_image: 'https://i.imgur.com/eEbelqe.png'
 tags: ['ZeroCode','Vietnam']
 priority: 0
-link: '/blog/what-is-worse-than-bad-code'
-slug: what-is-worse-than-bad-code
+link: '/blog/rumors-lazy-loading-and-security'
+slug: rumors-lazy-loading-and-security
 location: 'Hanoi, Vietnam'
 type_index: 0
 ---
