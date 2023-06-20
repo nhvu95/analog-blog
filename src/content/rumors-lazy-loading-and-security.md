@@ -71,7 +71,7 @@ But what happened if the user accesses the inner pages directly via URLs? Be awa
 
 I thought about a solution that uses some API gateway like NGINX / APACHE to solve this issue. Well well, Be honest I'm not a master of NGINX / APACHE, so I asked ChatGPT. Basically, NGINX configuration looks like this. I believe maybe we have a better way than @Teapot 418 😁 but this one is fast and easiest for a demo.
 
-```
+```yaml
 worker_processes auto;
 events {
   worker_connections 1024;
@@ -127,7 +127,7 @@ ChatGPT help me create almost of things, HTML, CSS, NestJS for Backend, Nginx co
 #### Apache is much better
 After taking a few days with Nginx, Lua, Luarocks and Openresty as well to try to find a better solution but go nowhere. I come up with Apache.
 
-```
+```yaml
 ServerName localdomain
 <VirtualHost *:80>
 

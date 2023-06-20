@@ -6,7 +6,7 @@ import {RouteMeta} from "@analogjs/router";
 import {provideContent, withMarkdownRenderer} from "@analogjs/content";
 
 export const routeMeta: RouteMeta = {
-  title: 'Analog Blog',
+  title: 'Vu Hieu Nguyen',
   meta: [{ name: 'description', content: 'Analog Blog Posts' }],
 };
 
