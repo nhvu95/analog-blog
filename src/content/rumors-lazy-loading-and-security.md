@@ -5,7 +5,7 @@ date_start: '2023/06/01'
 date_end: '2023/06/11'
 published: true
 image: 'https://i.imgur.com/hPfE5Py.jpg'
-header_image: 'https://i.imgur.com/eEbelqe.png'
+header_image: 'https://www.coverphotosforfb.com/files/covers/72-lazy-cat.jpg'
 tags: ['ZeroCode','Vietnam']
 priority: 0
 link: '/blog/rumors-lazy-loading-and-security'
