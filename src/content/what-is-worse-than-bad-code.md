@@ -69,10 +69,11 @@ mình cùng nhau đưa ra các biện pháp xử lý, hoặc chí ít những ng
 action xử lý chúng.
 
 Rồi một ngày mình cũng sẽ có 1 team cho riêng mình, hoặc hơn thế, mình sẽ có một công ty cho riêng mình, mình sợ rằng
-lúc
-đó mình sẽ quên những bài học mà chúng mình đã từng gặp phải. Post này để note lại những điểm hợp lý và bất hợp lý trong
+lúc đó mình sẽ quên những bài học mà chúng mình đã từng gặp phải. Post này để note lại những điểm hợp lý và bất hợp lý trong
 các quy trình mà mình đã từng làm việc, để trong tương lai khi nhìn lại, mình sẽ đúc rút được 1 quy trình hợp lý cho
-riêng mình
+riêng mình.
+
+Phần tiếp theo, nếu bạn là người tiêu cực, bạn sẽ có thể cảm thấy đây giống như 1 bài viết nói xấu công ty cũ, ý mình không phải vậy và cũng không có ý định như vậy. Nếu 1 cảm giác như vậy chạy qua đầu của bạn khi bạn đọc những phần dưới đây khuyến khích các bạn scroll xuống phần dưới cùng để đọc phần tổng kết. Mình xin cảm ơn.
 
 ### Một startup product nhỏ (trước 2018)
 
