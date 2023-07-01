@@ -41,18 +41,23 @@
   <nz-card class="flex flex-col justify-between h-32 first-domain xs:max-md:!h-24 xs:max-md:!w-1/2 xs:max-md:mr-1 after:xs:max-md:hidden">
     <ul>
       <li class="my-2">
-        <a class="block whitespace-nowrap text-ellipsis overflow-hidden"><span class="mr-1" nz-icon nzTheme="outline"
+        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"><span class="mr-1" nz-icon nzTheme="outline"
                                            nzType="link"></span>nhvu95.com</a>
       </li>
       <li class="my-2">
-        <a class="block whitespace-nowrap text-ellipsis overflow-hidden" href="https://soundmemos.nhvu95.com" target="_blank"><span class="mr-1" nz-icon
-                                                                                                nzTheme="outline"
-                                                                                                nzType="link"></span>soundmemos.nhvu95.com</a>
-      </li>
-      <li class="my-2">
-        <a class="block whitespace-nowrap text-ellipsis overflow-hidden" href="https://f2f.nhvu95.com" target="_blank"><span class="mr-1" nz-icon
+        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden" href="https://f2f.nhvu95.com" target="_blank"><span class="mr-1" nz-icon
                                                                                          nzTheme="outline"
                                                                                          nzType="link"></span>f2f.nhvu95.com</a>
+      </li>
+      <li class="my-2">
+        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden" href="https://soundmemos.nhvu95.com" target="_blank"><span class="mr-1" nz-icon
+                                                                                                                                                nzTheme="outline"
+                                                                                                                                                nzType="link"></span>soundmemos.nhvu95.com</a>
+      </li>
+      <li class="my-2">
+        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden" href="https://playground.nhvu95.com/?folder=/tmp/playground" target="_blank"><span class="mr-1" nz-icon
+                                                                                                                             nzTheme="outline"
+                                                                                                                             nzType="link"></span>playground.nhvu95.com</a>
       </li>
     </ul>
   </nz-card>
@@ -75,8 +80,8 @@
       </div>
       <div (mouseover)="web = webs[2]" [nzPopoverContent]="detailBodyTemplate" [nzPopoverTitle]="detailTitleTemplate"
            nz-popover>
-        <span class="icon angular w-[50px] h-[50px]"></span>
-        <label class="block mx-auto text-sm text-center">Image hosting</label>
+        <span class="icon playground w-[50px] h-[50px]"></span>
+        <label class="block mx-auto text-sm text-center">Playground</label>
       </div>
       <div (mouseover)="web = webs[3]" [nzPopoverContent]="detailBodyTemplate" [nzPopoverTitle]="detailTitleTemplate"
            nz-popover
@@ -92,7 +97,7 @@
   <nz-card class="mt-2 second-domain xs:max-md:!h-24 xs:max-md:!mt-0 after:xs:max-md:hidden xs:max-md:!w-1/2 xs:max-md:ml-1" nzBordered>
     <ul>
       <li class="my-2">
-        <a class="block whitespace-nowrap text-ellipsis overflow-hidden"><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span>*.mindstone.com</a>
+        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span>*.mindstone.com</a>
       </li>
     </ul>
   </nz-card>
@@ -145,18 +150,18 @@
     <nz-card class="item-bottom" nzBordered>
       <ul>
         <li class="my-2">
-          <a class="block whitespace-nowrap text-ellipsis overflow-hidden">
+          <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden">
                 <span class="leading-normal" class="mr-1" nz-icon nzTheme="outline" nzType="branches">
                 </span>@anuglar/i18n - assemble
           </a>
         </li>
         <li class="my-2">
-          <a class="block whitespace-nowrap text-ellipsis overflow-hidden">
+          <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden">
             <span class="leading-normal" class="mr-1" nz-icon nzTheme="outline"
                   nzType="branches"></span>@nhvu95/ebay-automation-tool</a>
         </li>
         <li class="my-2">
-          <a class="block whitespace-nowrap text-ellipsis overflow-hidden"
+          <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"
              href="https://github.com/nhvu95/angular-send-file-peer-to-peer">
             <span class="leading-normal" class="mr-1" nz-icon nzTheme="outline"
                   nzType="branches"></span>@nhvu95/send-file-peer-to-peer</a>

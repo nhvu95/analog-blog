@@ -45,13 +45,13 @@ export class CreativeComponent {
       source: "https://github.com/nhvu95/soundmemos-vuejs"
     },
     {
-      image: "https://i.imgur.com/CHSIb86.png",
-      techs: ["Angular12", "SpringBoot", "ImgurAPI", "PostgresSQL"],
-      name: "Hosting Image",
-      description: "When writing my blog post, I notice that I have to do a lot of stuff with my image, compress, crop, and upload to Imgur or do self-host. They cost me a lot of time, and this system was born to resolve and automatically this process.",
+      image: "https://i.imgur.com/5nOvx8E.jpg",
+      techs: ["OpenVSCode Server", "Docker", "Cloudflare"],
+      name: "Playground",
+      description: "This is virtual VsCode where I can write some basic logic or check to insurance all things work as expected. Sometimes I use this one when I work with a stranger's computer.",
       modified: "04/12/2021",
-      link: "/creative",
-      source: "https://github.com/nhvu95/hosting-image"
+      link: "https://playground.nhvu95.com/?folder=/tmp/playground",
+      source: "https://playground.nhvu95.com/?folder=/tmp/playground"
     },
     {
       image: "https://i.imgur.com/2O9end0.jpg",
