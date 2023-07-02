@@ -47,7 +47,8 @@
             },
             "production": {
               "sourcemap": false,
-              "mode": "production"
+              "mode": "production",
+              "outputHashing": "all"
             }
           }
         },

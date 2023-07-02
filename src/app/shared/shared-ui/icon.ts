@@ -25,7 +25,8 @@ import {
   BookTwoTone,
   GiftFill,
   SendOutline,
-  PhoneOutline
+  PhoneOutline,
+  ShoppingFill
 } from "@ant-design/icons-angular/icons";
 
 const _icons: IconDefinition[] = [
@@ -48,6 +49,7 @@ const _icons: IconDefinition[] = [
   DislikeTwoTone,
   DislikeOutline,
   DingtalkOutline,
+  ShoppingFill,
   CrownFill,
   FlagTwoTone,
   StarFill,

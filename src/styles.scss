@@ -43,7 +43,7 @@ span.icon {
   background-size: $bg-size;
 }
 
-.playground {
+.angular {
   background-position-x: -100px;
   background-position-y: -50px;
 }
@@ -135,6 +135,10 @@ span.icon {
 }
 .nginx{
   background-position-x: -350px;
+  background-position-y: -150px;
+}
+.playground{
+  background-position-x: -300px;
   background-position-y: -150px;
 }
 @layer utilities {

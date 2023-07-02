@@ -75,18 +75,18 @@
       </div>
       <div (mouseover)="web = webs[1]" [nzPopoverContent]="detailBodyTemplate" [nzPopoverTitle]="detailTitleTemplate"
            nz-popover>
-        <span class="icon vuejs w-[50px] h-[50px]"></span>
+        <a [href]="webs[1].link" target="_blank"><span class="icon vuejs w-[50px] h-[50px]"></span></a>
         <label class="block mx-auto text-sm text-center">Sound memos</label>
       </div>
       <div (mouseover)="web = webs[2]" [nzPopoverContent]="detailBodyTemplate" [nzPopoverTitle]="detailTitleTemplate"
            nz-popover>
-        <span class="icon playground w-[50px] h-[50px]"></span>
+        <a [href]="webs[2].link" target="_blank"><span class="icon playground w-[50px] h-[50px]"></span></a>
         <label class="block mx-auto text-sm text-center">Playground</label>
       </div>
       <div (mouseover)="web = webs[3]" [nzPopoverContent]="detailBodyTemplate" [nzPopoverTitle]="detailTitleTemplate"
            nz-popover
            nzPopoverPlacement="topRight">
-        <span class="icon f2f w-[50px] h-[50px]"></span>
+        <a [href]="webs[3].link" target="_blank"><span class="icon f2f w-[50px] h-[50px]"></span></a>
         <label class="block mx-auto text-sm text-center">F2F</label>
       </div>
     </div>
@@ -97,7 +97,7 @@
   <nz-card class="mt-2 second-domain xs:max-md:!h-24 xs:max-md:!mt-0 after:xs:max-md:hidden xs:max-md:!w-1/2 xs:max-md:ml-1" nzBordered>
     <ul>
       <li class="my-2">
-        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span>*.mindstone.com</a>
+        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span>*.mindstone.cc</a>
       </li>
     </ul>
   </nz-card>

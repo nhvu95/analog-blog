@@ -49,7 +49,7 @@ export class CreativeComponent {
       techs: ["OpenVSCode Server", "Docker", "Cloudflare"],
       name: "Playground",
       description: "This is virtual VsCode where I can write some basic logic or check to insurance all things work as expected. Sometimes I use this one when I work with a stranger's computer.",
-      modified: "04/12/2021",
+      modified: "30/06/2023",
       link: "https://playground.nhvu95.com/?folder=/tmp/playground",
       source: "https://playground.nhvu95.com/?folder=/tmp/playground"
     },
