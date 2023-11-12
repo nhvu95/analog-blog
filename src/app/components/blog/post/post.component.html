@@ -1,30 +1,56 @@
 <ng-container *ngIf="post$ | async as post">
-  <div class="markdown-body">
-    <img [src]="post.attributes['header_image']" class="w-full rounded-lg">
-    <h1>{{ post.attributes.title }}</h1>
-    <analog-markdown [content]="post.content"></analog-markdown>
-  </div>
-  <div class="mt-8">
-    <app-comment [slug]="post.slug"></app-comment>
-  </div>
-  <nz-back-top [nzVisibilityHeight]="100"></nz-back-top>
-  <ul class="fixed top-[calc(50%-4rem)] xs:max-md:left-2 md:max-lg:left-6 left-12">
-    <li>
-      <button class="text-blue-400" nz-button nzShape="circle" nzSize="large" nzType="default">
-        <span nz-icon nzTheme="outline" nzType="reload"></span>
-      </button>
-    </li>
-    <li class="my-2">
-      <button class="text-blue-400" nz-button nzShape="circle" nzSize="large" nzType="default" (click)="likePost(post.attributes['slug'])">
-        <span *ngIf="!liked" [theme]="'outline'" nz-icon nzType="heart"></span>
-        <span *ngIf="liked" [theme]="'fill'" nz-icon nzType="heart"></span>
-      </button>
-    </li>
-    <li>
-      <button class="text-blue-400" nz-button nzShape="circle" nzSize="large" nzType="default" (click)="goToComment()">
-        <span [theme]="!commented?'outline':'fill'" nz-icon nzTheme="outline" nzType="message"></span>
-      </button>
-    </li>
-  </ul>
-
+    <div class="markdown-body">
+        <img [src]="post.attributes['header_image']" class="w-full rounded-lg"/>
+        <h1>{{ post.attributes.title }}</h1>
+        <analog-markdown [content]="post.content"></analog-markdown>
+    </div>
+    <div class="mt-8">
+        <app-comment [slug]="post.slug"></app-comment>
+    </div>
+    <nz-back-top [nzVisibilityHeight]="100"></nz-back-top>
+    <ul
+            class="fixed top-[calc(50%-4rem)] xs:max-md:left-2 md:max-lg:left-6 left-12"
+    >
+        <li>
+            <button
+                    class="text-blue-400"
+                    nz-button
+                    nzShape="circle"
+                    nzSize="large"
+                    nzType="default"
+            >
+                <span nz-icon nzTheme="outline" nzType="reload"></span>
+            </button>
+        </li>
+        <li class="my-2">
+            <button
+                    (click)="likePost(post.attributes['slug'])"
+                    class="text-blue-400"
+                    nz-button
+                    nzShape="circle"
+                    nzSize="large"
+                    nzType="default"
+            >
+                <span *ngIf="!liked" [theme]="'outline'" nz-icon nzType="heart"></span>
+                <span *ngIf="liked" [theme]="'fill'" nz-icon nzType="heart"></span>
+            </button>
+        </li>
+        <li>
+            <button
+                    (click)="goToComment()"
+                    class="text-blue-400"
+                    nz-button
+                    nzShape="circle"
+                    nzSize="large"
+                    nzType="default"
+            >
+        <span
+                [theme]="!commented ? 'outline' : 'fill'"
+                nz-icon
+                nzTheme="outline"
+                nzType="message"
+        ></span>
+            </button>
+        </li>
+    </ul>
 </ng-container>

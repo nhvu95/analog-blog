@@ -1,17 +1,18 @@
-import {Client} from "ts-postgres";
-import {createApp} from "h3";
+import { DataSource } from 'typeorm';
+import { ICommentInfo } from '../models/comment.model';
+import { IPostInfo } from '../models/post.model';
 
-const client = new Client({
-  host: "192.168.1.50",
-  port: 5432,
-  user: "postgres",
-  password: "postgres",
-  database: "blog"
+export const AppDataSource = new DataSource({
+  type: 'sqlite',
+  database: `./line.sqlite`,
+  entities: [ICommentInfo, IPostInfo],
+  synchronize: true,
+  logging: false,
 });
-
-client.connect().then(() => {
-  // console.log("Connect to the database!")
-});
-const app = createApp();
-
-export {client, app};
+AppDataSource.initialize()
+  .then(() => {
+    console.log('Initialize success');
+  })
+  .catch((err) => {
+    console.log(err);
+  });

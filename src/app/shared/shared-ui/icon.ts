@@ -1,4 +1,4 @@
-import {IconDefinition} from "@ant-design/icons-angular";
+import { IconDefinition } from '@ant-design/icons-angular';
 import {
   BranchesOutline,
   CommentOutline,
@@ -26,8 +26,8 @@ import {
   GiftFill,
   SendOutline,
   PhoneOutline,
-  ShoppingFill
-} from "@ant-design/icons-angular/icons";
+  ShoppingFill,
+} from '@ant-design/icons-angular/icons';
 
 const _icons: IconDefinition[] = [
   GithubOutline,
@@ -56,8 +56,7 @@ const _icons: IconDefinition[] = [
   BookTwoTone,
   GiftFill,
   SendOutline,
-  PhoneOutline
+  PhoneOutline,
 ];
-
 
 export const icons = _icons;

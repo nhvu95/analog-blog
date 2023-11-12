@@ -1,13 +1,7 @@
-import {Component} from '@angular/core';
-import {RouterOutlet} from "@angular/router";
-import {CreativeComponent} from "../components/creative/creative.component";
-import {LayoutComponent} from "@shared";
-import {NzPopoverModule} from "ng-zorro-antd/popover";
-import {NzGridModule} from "ng-zorro-antd/grid";
-import {NzCardModule} from "ng-zorro-antd/card";
-import {NzIconModule} from "ng-zorro-antd/icon";
-import {NzTypographyModule} from "ng-zorro-antd/typography";
-import {CareerComponent} from "../components/career/career.component";
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { LayoutComponent } from '@shared';
+import { CareerComponent } from '../components/career/career.component';
 
 @Component({
   selector: 'app-creative-page',
@@ -18,12 +12,7 @@ import {CareerComponent} from "../components/career/career.component";
     </app-layout>
   `,
   styles: [``],
-  imports: [
-    RouterOutlet,
-    LayoutComponent,
-    CareerComponent,
-  ],
-  providers: []
+  imports: [RouterOutlet, LayoutComponent, CareerComponent],
+  providers: [],
 })
-export default class CreativePageComponent {
-}
+export default class CreativePageComponent {}

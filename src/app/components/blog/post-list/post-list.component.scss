@@ -40,7 +40,7 @@
 }
 
 .fake-input-shadow {
-  box-shadow: rgba(0, 0, 0, 0.13) 0px 20px 30px;
+  box-shadow: rgba(0, 0, 0, 0.13) 0 20px 30px;
 }
 
 app-topic-filter .rad-grp-topic-filter .ant-radio-button-wrapper-checked {
@@ -50,4 +50,3 @@ app-topic-filter .rad-grp-topic-filter .ant-radio-button-wrapper-checked {
 app-topic-filter .rad-grp-topic-filter .ant-radio-button-wrapper-checked:hover {
   background-color: $primary-color-400 !important;
 }
-

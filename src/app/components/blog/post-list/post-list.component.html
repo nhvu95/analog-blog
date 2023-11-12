@@ -1,18 +1,51 @@
-<app-header class="w-max z-10" [content]="'Blog'"></app-header>
+<app-header [content]="'Blog'" class="w-max z-10"></app-header>
 <div class="relative h-20 flex">
-  <app-search-bar class="z-20 -top-8 absolute flex w-full" (search)="currentSearch = $event; search()"></app-search-bar>
-  <div class="fake-input-shadow -top-8 !w-1/2 ml-1/4 h-16 absolute rounded-2xl z-0 w-full"></div>
+    <app-search-bar
+            (search)="currentSearch = $event; search()"
+            class="z-20 -top-8 absolute flex w-full"
+    ></app-search-bar>
+    <div
+            class="fake-input-shadow -top-8 !w-1/2 ml-1/4 h-16 absolute rounded-2xl z-0 w-full"
+    ></div>
 </div>
-<app-topic-filter [topics]="topicList" class="flex" (output)="currentFilter = $event; search()"></app-topic-filter>
-<app-post-list-item *ngIf="headPost" [content]="headPost" class="block mt-16 mb-[30px] xs:max-md:hidden" size="large"></app-post-list-item>
-<app-post-list-item *ngIf="headPost" [content]="headPost" class="block mt-6 mb-6 hidden xs:max-md:!block" size="small"></app-post-list-item>
+<app-topic-filter
+        (output)="currentFilter = $event; search()"
+        [topics]="topicList"
+        class="flex"
+></app-topic-filter>
+<app-post-list-item
+        *ngIf="headPost"
+        [content]="headPost"
+        class="block mt-16 mb-[30px] xs:max-md:hidden"
+        size="large"
+></app-post-list-item>
+<app-post-list-item
+        *ngIf="headPost"
+        [content]="headPost"
+        class="block mt-6 mb-6 hidden xs:max-md:!block"
+        size="small"
+></app-post-list-item>
 
 <div nz-row>
-  <div *ngFor="let post of postList" nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="8" nzXXl="8" class="gutter-row xs:max-md:!px-0 mt-[35px] px-6" nz-col>
-    <div class="inner-box">
-      <app-post-list-item [content]="post" class="block" size="small"></app-post-list-item>
+    <div
+            *ngFor="let post of postList"
+            class="gutter-row xs:max-md:!px-0 mt-[35px] px-6"
+            nz-col
+            nzLg="12"
+            nzMd="12"
+            nzSm="24"
+            nzXXl="8"
+            nzXl="8"
+            nzXs="24"
+    >
+        <div class="inner-box">
+            <app-post-list-item
+                    [content]="post"
+                    class="block"
+                    size="small"
+            ></app-post-list-item>
+        </div>
     </div>
-  </div>
 </div>
 
 <nz-back-top [nzVisibilityHeight]="100"></nz-back-top>

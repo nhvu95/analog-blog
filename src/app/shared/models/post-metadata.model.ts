@@ -12,7 +12,7 @@ export interface PostMetadata {
   slug: string;
   location: string;
   type_index: number;
-  comment:number;
-  liked:number;
-  read:number;
+  comment: number;
+  liked: number;
+  read: number;
 }

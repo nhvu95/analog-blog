@@ -1,6 +1,6 @@
-import {Component, Input, ViewEncapsulation} from "@angular/core";
-import {CommonModule} from '@angular/common';
-import {NzCardModule} from 'ng-zorro-antd/card';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NzCardModule } from 'ng-zorro-antd/card';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,7 @@ import {NzCardModule} from 'ng-zorro-antd/card';
   imports: [CommonModule, NzCardModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent {
   @Input() content = 'Blog';

@@ -1,50 +1,126 @@
-<div class="navigation-bar items-center w-full inline-flex h-[150px] xs:max-xl:h-[100px]" id="navbar">
-  <nz-avatar-group class="flex-row whitespace-nowrap items-center w-48">
-    <nz-avatar *ngIf="logo" [nzSize]="55" [nzSrc]="logo" class="ant-avatar" nzShape="square"></nz-avatar>
-    <!--        <nz-avatar *ngIf="logos" [nzSrcSet]="logos" nzShape="square" nzSize="large"></nz-avatar>-->
-    <h3 class="mb-0 site-title dark-primary text-5xl">VU NGUYEN</h3>
-  </nz-avatar-group>
-  <div class="icons-list invisible xs:max-xl:hidden">
-    <span *ngFor="let logo of subLogos" [nzType]="logo.label" class="mx-4 text-24 !mr-2.5" nz-icon
-          nzTheme="outline"></span>
-  </div>
-  <ul class="!mx-auto menu-list normal-color xs:max-md:invisible xs:max-md:h-4 xs:max-sm:w-16" nz-menu nzMode="horizontal">
-    <li *ngFor="let item of menus" [nzMatchRouterExact]="true" nz-menu-item>
-      <a [href]="item.link" [rel]="item.label" class="text-[16px]">{{item.label}}</a>
-    </li>
-  </ul>
-  <div class="icons-list dark-primary">
-    <a *ngFor="let logo of subLogos" [href]="logo.link" target="_blank">
-      <span [nzType]="logo.label" class="text-24 hover:text-blue-400" nz-icon nzTheme="outline"></span>
-    </a>
-    <button [nzDropdownMenu]="menu1" aria-label="Contact me" class="btn-contact-me2 hidden"
-            id="btnContactMeCircle" nz-button nz-dropdown nzPlacement="bottomRight" nzShape="circle"
-            nzSize="large" nzTrigger="click" nzType="primary">
-      <span class="hover:text-orange-200" nz-icon nzTheme="outline" nzType="phone"></span>
-    </button>
-  </div>
-  <button [nzDropdownMenu]="menu1" aria-label="Contact me" class="btn-contact-me !ml-4 !w-40 !h-50px" id="btnContactMe"
-          nz-button
-          nz-dropdown nzPlacement="bottomRight" nzShape="round"
-          nzSize="large" nzTrigger="click" nzType="primary">Contact me
-  </button>
-  <nz-dropdown-menu #menu1="nzDropdownMenu">
-    <ul class="rounded-lg" nz-menu>
-      <li (click)="openLink('https://mail.google.com/mail/?view=cm&fs=1&to=nhvu.95@gmail.com&su=HOW%20CAN%20I%20HELP%20U%3F')"
-          nz-menu-item>
-        <span class="mr-2 hover:text-blue-400" nz-icon
-              nzTheme="outline" nzType="send"></span>
-        nhvu.95@gmail.com
-      </li>
-      <li nz-menu-item>
-        <span class="mr-2 hover:text-blue-400" nz-icon nzTheme="outline" nzType="phone"></span>
-        +84 966 798 256
-      </li>
+<div
+        class="navigation-bar items-center w-full inline-flex h-[150px] xs:max-xl:h-[100px]"
+        id="navbar"
+>
+    <nz-avatar-group class="flex-row whitespace-nowrap items-center w-48">
+        <nz-avatar
+                *ngIf="logo"
+                [nzSize]="55"
+                [nzSrc]="logo"
+                class="ant-avatar"
+                nzShape="square"
+        ></nz-avatar>
+        <!--        <nz-avatar *ngIf="logos" [nzSrcSet]="logos" nzShape="square" nzSize="large"></nz-avatar>-->
+        <h3 class="mb-0 site-title dark-primary text-5xl">VU NGUYEN</h3>
+    </nz-avatar-group>
+    <div class="icons-list invisible xs:max-xl:hidden">
+    <span
+            *ngFor="let logo of subLogos"
+            [nzType]="logo.label"
+            class="mx-4 text-24 !mr-2.5"
+            nz-icon
+            nzTheme="outline"
+    ></span>
+    </div>
+    <ul
+            class="!mx-auto menu-list normal-color xs:max-md:invisible xs:max-md:h-4 xs:max-sm:w-16"
+            nz-menu
+            nzMode="horizontal"
+    >
+        <li *ngFor="let item of menus" [nzMatchRouterExact]="true" nz-menu-item>
+            <a [href]="item.link" [rel]="item.label" class="text-[16px]">{{
+                item.label
+                }}</a>
+        </li>
     </ul>
-  </nz-dropdown-menu>
+    <div class="icons-list dark-primary">
+        <a *ngFor="let logo of subLogos" [href]="logo.link" target="_blank">
+      <span
+              [nzType]="logo.label"
+              class="text-24 hover:text-blue-400"
+              nz-icon
+              nzTheme="outline"
+      ></span>
+        </a>
+        <button
+                [nzDropdownMenu]="menu1"
+                aria-label="Contact me"
+                class="btn-contact-me2 hidden"
+                id="btnContactMeCircle"
+                nz-button
+                nz-dropdown
+                nzPlacement="bottomRight"
+                nzShape="circle"
+                nzSize="large"
+                nzTrigger="click"
+                nzType="primary"
+        >
+      <span
+              class="hover:text-orange-200"
+              nz-icon
+              nzTheme="outline"
+              nzType="phone"
+      ></span>
+        </button>
+    </div>
+    <button
+            [nzDropdownMenu]="menu1"
+            aria-label="Contact me"
+            class="btn-contact-me !ml-4 !w-40 !h-50px"
+            id="btnContactMe"
+            nz-button
+            nz-dropdown
+            nzPlacement="bottomRight"
+            nzShape="round"
+            nzSize="large"
+            nzTrigger="click"
+            nzType="primary"
+    >
+        Contact me
+    </button>
+    <nz-dropdown-menu #menu1="nzDropdownMenu">
+        <ul class="rounded-lg" nz-menu>
+            <li
+                    (click)="
+          openLink(
+            'https://mail.google.com/mail/?view=cm&fs=1&to=nhvu.95@gmail.com&su=HOW%20CAN%20I%20HELP%20U%3F'
+          )
+        "
+                    nz-menu-item
+            >
+        <span
+                class="mr-2 hover:text-blue-400"
+                nz-icon
+                nzTheme="outline"
+                nzType="send"
+        ></span>
+                nhvu.95@gmail.com
+            </li>
+            <li nz-menu-item>
+        <span
+                class="mr-2 hover:text-blue-400"
+                nz-icon
+                nzTheme="outline"
+                nzType="phone"
+        ></span>
+                +84 966 798 256
+            </li>
+        </ul>
+    </nz-dropdown-menu>
 </div>
-<ul class="!mx-auto menu-list relative -top-10 bg-transparent justify-center normal-color h-[50px] items-center flex invisible xs:max-md:!visible" nz-menu nzMode="horizontal">
-  <li *ngFor="let item of menus" [nzMatchRouterExact]="true" nz-menu-item class=" h-[50px] ">
-    <a [href]="item.link" [rel]="item.label" class="text-[16px]">{{item.label}}</a>
-  </li>
+<ul
+        class="!mx-auto menu-list relative -top-10 bg-transparent justify-center normal-color h-[50px] items-center flex invisible xs:max-md:!visible"
+        nz-menu
+        nzMode="horizontal"
+>
+    <li
+            *ngFor="let item of menus"
+            [nzMatchRouterExact]="true"
+            class="h-[50px]"
+            nz-menu-item
+    >
+        <a [href]="item.link" [rel]="item.label" class="text-[16px]">{{
+            item.label
+            }}</a>
+    </li>
 </ul>

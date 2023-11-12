@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 @font-face {
   font-family: "Poppins";
-  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
 }
 
 @font-face {
   font-family: "Quicksand";
-  src: url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+  src: url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 }
 
 #navbar {
-
-  .menu-list, #btnContactMe {
+  .menu-list,
+  #btnContactMe {
     font-family: "Quicksand", sans-serif;
   }
 
@@ -35,13 +35,13 @@
     //border-bottom: 0px;
     //outline: auto;
   }
+
   .icons-list > * {
     @apply mx-2;
   }
 }
 
-
-@media only screen and ( max-width: 992px) {
+@media only screen and (max-width: 992px) {
   #navbar {
     @apply h-[70px];
   }
@@ -72,5 +72,3 @@
     @apply w-10 h-10 #{!important};
   }
 }
-
-

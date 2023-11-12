@@ -1,216 +1,347 @@
-<div class="justify-center items-center h-[calc(100vh-250px)]" nz-row nzGutter="16">
-  <div nz-col nzSpan="8" class="xs:max-md:hidden">
-    <nz-card class="outer h-[19rem]" nzType="inner">
-      <label class="font-semibold flex items-center justify-end">Cloudflare<span
-        class="icon cloudflare scale-75 w-[50px] h-[50px] !mx-0"></span></label>
-      <ng-container *ngTemplateOutlet="frontendDomainTemplate"></ng-container>
-      <ng-container *ngTemplateOutlet="backendDomainTemplate"></ng-container>
-    </nz-card>
-    <ng-container *ngTemplateOutlet="ec2Template"></ng-container>
-  </div>
-  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12" nzXXl="12" class="hidden mb-4 xs:max-md:!flex">
-    <nz-card class="outer w-full" nzType="inner">
-      <label class="font-semibold flex items-center justify-end">Cloudflare<span
-        class="icon cloudflare scale-75 w-[50px] h-[50px] !mx-0"></span></label>
-      <div class="flex">
-        <ng-container *ngTemplateOutlet="frontendDomainTemplate"></ng-container>
-        <ng-container *ngTemplateOutlet="backendDomainTemplate"></ng-container>
-      </div>
-    </nz-card>
-  </div>
-  <div nz-col nzXs="24" nzSm="24" nzMd="12" nzLg="12" nzXl="12" nzXXl="12">
-    <nz-card class="outer h-[19rem]" nzType="inner">
-      <label class="font-semibold flex items-center justify-end">Docker<span
-        class="icon docker scale-[0.6] w-[50px] h-[50px] !mx-0"></span></label>
-      <div class="!px-0" nz-col nzGutter="16">
-        <ng-container *ngTemplateOutlet="frontendTemplate"></ng-container>
-        <ng-container *ngTemplateOutlet="backendTemplate"></ng-container>
-      </div>
-    </nz-card>
-    <div class="hidden xs:max-md:!flex">
-      <ng-container *ngTemplateOutlet="ec2Template"></ng-container>
+<div
+        class="justify-center items-center h-[calc(100vh-250px)]"
+        nz-row
+        nzGutter="16"
+>
+    <div class="xs:max-md:hidden" nz-col nzSpan="8">
+        <nz-card class="outer h-[19rem]" nzType="inner">
+            <label class="font-semibold flex items-center justify-end"
+            >Cloudflare<span
+                    class="icon cloudflare scale-75 w-[50px] h-[50px] !mx-0"
+            ></span
+            ></label>
+            <ng-container *ngTemplateOutlet="frontendDomainTemplate"></ng-container>
+            <ng-container *ngTemplateOutlet="backendDomainTemplate"></ng-container>
+        </nz-card>
+        <ng-container *ngTemplateOutlet="ec2Template"></ng-container>
     </div>
-    <div class="flex gap-4">
-      <ng-container *ngTemplateOutlet="githubTemplate"></ng-container>
-      <ng-container *ngTemplateOutlet="npmTemplate"></ng-container>
+    <div
+            class="hidden mb-4 xs:max-md:!flex"
+            nz-col
+            nzLg="12"
+            nzMd="12"
+            nzSm="24"
+            nzXXl="12"
+            nzXl="12"
+            nzXs="24"
+    >
+        <nz-card class="outer w-full" nzType="inner">
+            <label class="font-semibold flex items-center justify-end"
+            >Cloudflare<span
+                    class="icon cloudflare scale-75 w-[50px] h-[50px] !mx-0"
+            ></span
+            ></label>
+            <div class="flex">
+                <ng-container *ngTemplateOutlet="frontendDomainTemplate"></ng-container>
+                <ng-container *ngTemplateOutlet="backendDomainTemplate"></ng-container>
+            </div>
+        </nz-card>
     </div>
-  </div>
+    <div nz-col nzLg="12" nzMd="12" nzSm="24" nzXXl="12" nzXl="12" nzXs="24">
+        <nz-card class="outer h-[19rem]" nzType="inner">
+            <label class="font-semibold flex items-center justify-end"
+            >Docker<span
+                    class="icon docker scale-[0.6] w-[50px] h-[50px] !mx-0"
+            ></span
+            ></label>
+            <div class="!px-0" nz-col nzGutter="16">
+                <ng-container *ngTemplateOutlet="frontendTemplate"></ng-container>
+                <ng-container *ngTemplateOutlet="backendTemplate"></ng-container>
+            </div>
+        </nz-card>
+        <div class="hidden xs:max-md:!flex">
+            <ng-container *ngTemplateOutlet="ec2Template"></ng-container>
+        </div>
+        <div class="flex gap-4">
+            <ng-container *ngTemplateOutlet="githubTemplate"></ng-container>
+            <ng-container *ngTemplateOutlet="npmTemplate"></ng-container>
+        </div>
+    </div>
 </div>
 
 <ng-template #frontendDomainTemplate>
-  <nz-card class="flex flex-col justify-between h-32 first-domain xs:max-md:!h-24 xs:max-md:!w-1/2 xs:max-md:mr-1 after:xs:max-md:hidden">
-    <ul>
-      <li class="my-2">
-        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"><span class="mr-1" nz-icon nzTheme="outline"
-                                           nzType="link"></span>nhvu95.com</a>
-      </li>
-      <li class="my-2">
-        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden" href="https://f2f.nhvu95.com" target="_blank"><span class="mr-1" nz-icon
-                                                                                         nzTheme="outline"
-                                                                                         nzType="link"></span>f2f.nhvu95.com</a>
-      </li>
-      <li class="my-2">
-        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden" href="https://soundmemos.nhvu95.com" target="_blank"><span class="mr-1" nz-icon
-                                                                                                                                                nzTheme="outline"
-                                                                                                                                                nzType="link"></span>soundmemos.nhvu95.com</a>
-      </li>
-      <li class="my-2">
-        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden" href="https://playground.nhvu95.com/?folder=/tmp/playground" target="_blank"><span class="mr-1" nz-icon
-                                                                                                                             nzTheme="outline"
-                                                                                                                             nzType="link"></span>playground.nhvu95.com</a>
-      </li>
-    </ul>
-  </nz-card>
+    <nz-card
+            class="flex flex-col justify-between h-32 first-domain xs:max-md:!h-24 xs:max-md:!w-1/2 xs:max-md:mr-1 after:xs:max-md:hidden"
+    >
+        <ul>
+            <li class="my-2">
+                <a
+                        class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"
+                ><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span
+                >nhvu95.com</a
+                >
+            </li>
+            <li class="my-2">
+                <a
+                        class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"
+                        href="https://f2f.nhvu95.com"
+                        target="_blank"
+                ><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span
+                >f2f.nhvu95.com</a
+                >
+            </li>
+            <li class="my-2">
+                <a
+                        class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"
+                        href="https://soundmemos.nhvu95.com"
+                        target="_blank"
+                ><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span
+                >soundmemos.nhvu95.com</a
+                >
+            </li>
+            <li class="my-2">
+                <a
+                        class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"
+                        href="https://playground.nhvu95.com/?folder=/tmp/playground"
+                        target="_blank"
+                ><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span
+                >playground.nhvu95.com</a
+                >
+            </li>
+        </ul>
+    </nz-card>
 </ng-template>
 
 <ng-template #frontendTemplate>
-  <nz-card class="creative-row h-32" nz-row>
-    <label class="font-semibold text-center w-full block">Front-end</label>
-    <div class="flex h-24 items-center justify-around">
-      <div (mouseover)="web = webs[0]" [nzPopoverContent]="detailBodyTemplate" [nzPopoverTitle]="detailTitleTemplate"
-           nz-popover
-           nzPopoverTrigger="hover">
-        <span class="icon blog-icon w-[50px] h-[50px]"></span>
-        <label class="block mx-auto text-sm text-center">Portfolio</label>
-      </div>
-      <div (mouseover)="web = webs[1]" [nzPopoverContent]="detailBodyTemplate" [nzPopoverTitle]="detailTitleTemplate"
-           nz-popover>
-        <a [href]="webs[1].link" target="_blank"><span class="icon vuejs w-[50px] h-[50px]"></span></a>
-        <label class="block mx-auto text-sm text-center">Sound memos</label>
-      </div>
-      <div (mouseover)="web = webs[2]" [nzPopoverContent]="detailBodyTemplate" [nzPopoverTitle]="detailTitleTemplate"
-           nz-popover>
-        <a [href]="webs[2].link" target="_blank"><span class="icon playground w-[50px] h-[50px]"></span></a>
-        <label class="block mx-auto text-sm text-center">Playground</label>
-      </div>
-      <div (mouseover)="web = webs[3]" [nzPopoverContent]="detailBodyTemplate" [nzPopoverTitle]="detailTitleTemplate"
-           nz-popover
-           nzPopoverPlacement="topRight">
-        <a [href]="webs[3].link" target="_blank"><span class="icon f2f w-[50px] h-[50px]"></span></a>
-        <label class="block mx-auto text-sm text-center">F2F</label>
-      </div>
-    </div>
-  </nz-card>
+    <nz-card class="creative-row h-32" nz-row>
+        <label class="font-semibold text-center w-full block">Front-end</label>
+        <div class="flex h-24 items-center justify-around">
+            <div
+                    (mouseover)="web = webs[0]"
+                    [nzPopoverContent]="detailBodyTemplate"
+                    [nzPopoverTitle]="detailTitleTemplate"
+                    nz-popover
+                    nzPopoverTrigger="hover"
+            >
+                <span class="icon blog-icon w-[50px] h-[50px]"></span>
+                <label class="block mx-auto text-sm text-center">Portfolio</label>
+            </div>
+            <div
+                    (mouseover)="web = webs[1]"
+                    [nzPopoverContent]="detailBodyTemplate"
+                    [nzPopoverTitle]="detailTitleTemplate"
+                    nz-popover
+            >
+                <a [href]="webs[1].link" target="_blank"
+                ><span class="icon vuejs w-[50px] h-[50px]"></span
+                ></a>
+                <label class="block mx-auto text-sm text-center">Sound memos</label>
+            </div>
+            <div
+                    (mouseover)="web = webs[2]"
+                    [nzPopoverContent]="detailBodyTemplate"
+                    [nzPopoverTitle]="detailTitleTemplate"
+                    nz-popover
+            >
+                <a [href]="webs[2].link" target="_blank"
+                ><span class="icon playground w-[50px] h-[50px]"></span
+                ></a>
+                <label class="block mx-auto text-sm text-center">Playground</label>
+            </div>
+            <div
+                    (mouseover)="web = webs[3]"
+                    [nzPopoverContent]="detailBodyTemplate"
+                    [nzPopoverTitle]="detailTitleTemplate"
+                    nz-popover
+                    nzPopoverPlacement="topRight"
+            >
+                <a [href]="webs[3].link" target="_blank"
+                ><span class="icon f2f w-[50px] h-[50px]"></span
+                ></a>
+                <label class="block mx-auto text-sm text-center">F2F</label>
+            </div>
+        </div>
+    </nz-card>
 </ng-template>
 
 <ng-template #backendDomainTemplate>
-  <nz-card class="mt-2 second-domain xs:max-md:!h-24 xs:max-md:!mt-0 after:xs:max-md:hidden xs:max-md:!w-1/2 xs:max-md:ml-1" nzBordered>
-    <ul>
-      <li class="my-2">
-        <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span>*.mindstone.cc</a>
-      </li>
-    </ul>
-  </nz-card>
+    <nz-card
+            class="mt-2 second-domain xs:max-md:!h-24 xs:max-md:!mt-0 after:xs:max-md:hidden xs:max-md:!w-1/2 xs:max-md:ml-1"
+            nzBordered
+    >
+        <ul>
+            <li class="my-2">
+                <a
+                        class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"
+                ><span class="mr-1" nz-icon nzTheme="outline" nzType="link"></span
+                >*.mindstone.cc</a
+                >
+            </li>
+        </ul>
+    </nz-card>
 </ng-template>
 
 <ng-template #backendTemplate>
-  <nz-card class="creative-row mt-2 h-32" nz-row>
-    <label class="font-semibold text-center w-full block">Back-end</label>
-    <div class="flex h-24 items-center justify-around">
-      <div class="min-w-[80px]">
-        <span class="icon nginx w-[50px] h-[50px]"></span>
-        <label class="block mx-auto text-sm text-center">Nginx</label>
-      </div>
-      <div class="min-w-[80px]">
-        <span class="icon spring-boot w-[50px] h-[50px]"></span>
-        <label class="block mx-auto text-sm text-center">F2F API</label>
-      </div>
-      <div class="min-w-[80px]">
-        <span class="icon active-mq w-[50px] h-[50px]"></span>
-        <label class="block mx-auto text-sm text-center">ActiveMQ</label>
-      </div>
-      <div class="min-w-[80px]">
-        <span class="icon postgres w-[50px] h-[50px]"></span>
-        <label class="block mx-auto text-sm text-center">PostgresSQL</label>
-      </div>
-    </div>
-  </nz-card>
+    <nz-card class="creative-row mt-2 h-32" nz-row>
+        <label class="font-semibold text-center w-full block">Back-end</label>
+        <div class="flex h-24 items-center justify-around">
+            <div class="min-w-[80px]">
+                <span class="icon nginx w-[50px] h-[50px]"></span>
+                <label class="block mx-auto text-sm text-center">Nginx</label>
+            </div>
+            <div class="min-w-[80px]">
+                <span class="icon spring-boot w-[50px] h-[50px]"></span>
+                <label class="block mx-auto text-sm text-center">F2F API</label>
+            </div>
+            <div class="min-w-[80px]">
+                <span class="icon active-mq w-[50px] h-[50px]"></span>
+                <label class="block mx-auto text-sm text-center">ActiveMQ</label>
+            </div>
+            <div class="min-w-[80px]">
+                <span class="icon postgres w-[50px] h-[50px]"></span>
+                <label class="block mx-auto text-sm text-center">PostgresSQL</label>
+            </div>
+        </div>
+    </nz-card>
 </ng-template>
 <ng-template #ec2Template>
-  <nz-card class="mt-4 outer h-[10rem] xs:max-md:!w-full xs:max-md:h-[9rem]" nzType="inner">
-    <label class="font-semibold flex items-center justify-end">EC2
-      <span class="w-4 overflow-hidden w-[35px] ml-2">
-          <span class="icon aws scale-50 w-[100px] h-[50px] origin-left"></span>
-        </span>
-    </label>
-    <nz-card class="item-bottom h-[7.2rem] xs:max-md:h-[6.5rem]">
-      <div class="mt-2">
-        <span class="icon server w-[50px] h-[50px]"></span>
-        <label class="block mx-auto text-sm text-center">TURN Server</label>
-      </div>
+    <nz-card
+            class="mt-4 outer h-[10rem] xs:max-md:!w-full xs:max-md:h-[9rem]"
+            nzType="inner"
+    >
+        <label class="font-semibold flex items-center justify-end"
+        >EC2
+            <span class="w-4 overflow-hidden w-[35px] ml-2">
+        <span class="icon aws scale-50 w-[100px] h-[50px] origin-left"></span>
+      </span>
+        </label>
+        <nz-card class="item-bottom h-[7.2rem] xs:max-md:h-[6.5rem]">
+            <div class="mt-2">
+                <span class="icon server w-[50px] h-[50px]"></span>
+                <label class="block mx-auto text-sm text-center">TURN Server</label>
+            </div>
+        </nz-card>
     </nz-card>
-  </nz-card>
 </ng-template>
 
 <ng-template #githubTemplate>
-  <nz-card class="outer mt-4 w-[calc(50%-0.5rem)] h-[10rem]" nzType="inner">
-    <label class="font-semibold flex items-center justify-end">Github
-      <span [nzType]="'github'" class="mx-4 text-24 !mr-2.5" nz-icon nzTheme="outline"></span>
-    </label>
-    <nz-card class="item-bottom" nzBordered>
-      <ul>
-        <li class="my-2">
-          <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden">
-                <span class="leading-normal" class="mr-1" nz-icon nzTheme="outline" nzType="branches">
-                </span>@anuglar/i18n - assemble
-          </a>
-        </li>
-        <li class="my-2">
-          <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden">
-            <span class="leading-normal" class="mr-1" nz-icon nzTheme="outline"
-                  nzType="branches"></span>@nhvu95/ebay-automation-tool</a>
-        </li>
-        <li class="my-2">
-          <a class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"
-             href="https://github.com/nhvu95/angular-send-file-peer-to-peer">
-            <span class="leading-normal" class="mr-1" nz-icon nzTheme="outline"
-                  nzType="branches"></span>@nhvu95/send-file-peer-to-peer</a>
-        </li>
-      </ul>
+    <nz-card class="outer mt-4 w-[calc(50%-0.5rem)] h-[10rem]" nzType="inner">
+        <label class="font-semibold flex items-center justify-end"
+        >Github
+            <span
+                    [nzType]="'github'"
+                    class="mx-4 text-24 !mr-2.5"
+                    nz-icon
+                    nzTheme="outline"
+            ></span>
+        </label>
+        <nz-card class="item-bottom" nzBordered>
+            <ul>
+                <li class="my-2">
+                    <a
+                            class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"
+                    >
+            <span
+                    class="leading-normal"
+                    class="mr-1"
+                    nz-icon
+                    nzTheme="outline"
+                    nzType="branches"
+            >
+            </span
+            >@anuglar/i18n - assemble
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a
+                            class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"
+                    >
+            <span
+                    class="leading-normal"
+                    class="mr-1"
+                    nz-icon
+                    nzTheme="outline"
+                    nzType="branches"
+            ></span
+            >@nhvu95/ebay-automation-tool</a
+                    >
+                </li>
+                <li class="my-2">
+                    <a
+                            class="flex items-center whitespace-nowrap text-ellipsis overflow-hidden"
+                            href="https://github.com/nhvu95/angular-send-file-peer-to-peer"
+                    >
+            <span
+                    class="leading-normal"
+                    class="mr-1"
+                    nz-icon
+                    nzTheme="outline"
+                    nzType="branches"
+            ></span
+            >@nhvu95/send-file-peer-to-peer</a
+                    >
+                </li>
+            </ul>
+        </nz-card>
     </nz-card>
-  </nz-card>
 </ng-template>
 <ng-template #npmTemplate>
-  <nz-card class="outer mt-4 w-[calc(50%-0.5rem)] h-[10rem]" nzType="inner">
-    <label class="font-semibold flex items-center justify-end">npm
-      <span class="w-4 overflow-hidden w-[60px] ml-2">
-          <span class="icon npm scale-[0.6] w-[100px] h-[50px] origin-left"></span>
-        </span></label>
-    <nz-card class="item-bottom" nzBordered>
-      <ul>
-        <li class="my-2"><a
-          class="block whitespace-nowrap text-ellipsis overflow-hidden">@nhvu95/scully-plugin-emoji</a></li>
-        <li class="my-2"><a class="block whitespace-nowrap text-ellipsis overflow-hidden">@nhvu95/scully-plugin-scroll2section</a>
-        </li>
-        <li class="my-2"><a class="block whitespace-nowrap text-ellipsis overflow-hidden">@nhvu95/scully-plugin-lazydisplay</a>
-        </li>
-      </ul>
+    <nz-card class="outer mt-4 w-[calc(50%-0.5rem)] h-[10rem]" nzType="inner">
+        <label class="font-semibold flex items-center justify-end"
+        >npm
+            <span class="w-4 overflow-hidden w-[60px] ml-2">
+        <span
+                class="icon npm scale-[0.6] w-[100px] h-[50px] origin-left"
+        ></span> </span
+            ></label>
+        <nz-card class="item-bottom" nzBordered>
+            <ul>
+                <li class="my-2">
+                    <a class="block whitespace-nowrap text-ellipsis overflow-hidden"
+                    >@nhvu95/scully-plugin-emoji</a
+                    >
+                </li>
+                <li class="my-2">
+                    <a class="block whitespace-nowrap text-ellipsis overflow-hidden"
+                    >@nhvu95/scully-plugin-scroll2section</a
+                    >
+                </li>
+                <li class="my-2">
+                    <a class="block whitespace-nowrap text-ellipsis overflow-hidden"
+                    >@nhvu95/scully-plugin-lazydisplay</a
+                    >
+                </li>
+            </ul>
+        </nz-card>
     </nz-card>
-  </nz-card>
 </ng-template>
 
 <ng-template #detailTitleTemplate>
-  <div class="flex justify-between">
-    <label class="font-semibold flex items-center justify-end">{{web.name}}</label>
-    <ul>
-      <li *ngFor="let tech of web.techs" class="inline-block ml-2 text-orange-300">{{tech}}</li>
-    </ul>
-  </div>
+    <div class="flex justify-between">
+        <label class="font-semibold flex items-center justify-end">{{
+            web.name
+            }}</label>
+        <ul>
+            <li
+                    *ngFor="let tech of web.techs"
+                    class="inline-block ml-2 text-orange-300"
+            >
+                {{ tech }}
+            </li>
+        </ul>
+    </div>
 </ng-template>
 <ng-template #detailBodyTemplate>
-  <div class="detail-container flex ">
-    <nz-card [ngStyle]="{backgroundImage: 'url('+ web.image+ ')'}"
-             class="detail-img w-36 h-36 rounded-lg mr-4"></nz-card>
-    <div class="w-[26rem] flex flex-col justify-between">
-      <p align="justify">{{web.description}}</p>
-      <div class="flex justify-between mt-2">
-        <label class="font-light"><span>Modified: </span>{{web.modified}}</label>
-        <ul>
-          <li class="inline-block mr-4 text-blue-400"><a [href]="web.link" target="_blank">Link</a></li>
-          <li class="inline-block text-blue-400"><a [href]="web.source" target="_blank">Source</a></li>
-        </ul>
-      </div>
+    <div class="detail-container flex">
+        <nz-card
+                [ngStyle]="{ backgroundImage: 'url(' + web.image + ')' }"
+                class="detail-img w-36 h-36 rounded-lg mr-4"
+        ></nz-card>
+        <div class="w-[26rem] flex flex-col justify-between">
+            <p align="justify">{{ web.description }}</p>
+            <div class="flex justify-between mt-2">
+                <label class="font-light"
+                ><span>Modified: </span>{{ web.modified }}</label
+                >
+                <ul>
+                    <li class="inline-block mr-4 text-blue-400">
+                        <a [href]="web.link" target="_blank">Link</a>
+                    </li>
+                    <li class="inline-block text-blue-400">
+                        <a [href]="web.source" target="_blank">Source</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-
-  </div>
 </ng-template>

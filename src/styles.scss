@@ -2,11 +2,13 @@
 @import "src/assets/styles/theme";
 
 $rem: 16px;
-.dark-primary, .dark-primary a {
+.dark-primary,
+.dark-primary a {
   color: $dark-color !important;
 }
 
-.normal-color, .normal-color a {
+.normal-color,
+.normal-color a {
   color: $normal-text-color !important;
 }
 
@@ -17,11 +19,22 @@ html {
     font-family: $text-font;
   }
 
-  h1, h2, h3, h4, h5, h6, h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  h1 span,
+  h2 span,
+  h3 span,
+  h4 span,
+  h5 span,
+  h6 span {
     font-family: $header-font;
   }
 
-  body{
+  body {
     overflow-y: auto;
     overflow-y: overlay;
     font-size: $rem;
@@ -72,75 +85,93 @@ span.icon {
   background-position-x: -300px;
   background-position-y: -0px;
 }
+
 .testcafe {
   background-position-x: -350px;
   background-position-y: -0px;
 }
+
 .javascript {
   background-position-x: -400px;
   background-position-y: -0px;
 }
+
 .document {
   background-position-x: -250px;
   background-position-y: -50px;
 }
+
 .team-management {
   background-position-x: -300px;
   background-position-y: -50px;
 }
+
 .project-management {
   background-position-x: -350px;
   background-position-y: -50px;
 }
+
 .sharing {
   background-position-x: -400px;
   background-position-y: -50px;
 }
+
 .vuejs {
   background-position-x: -0px;
   background-position-y: -100px;
 }
+
 .f2f {
   background-position-x: -50px;
   background-position-y: -100px;
 }
+
 .server {
   background-position-x: -100px;
   background-position-y: -100px;
 }
+
 .active-mq {
   background-position-x: -150px;
   background-position-y: -100px;
 }
+
 .npm {
   background-position-x: -200px;
   background-position-y: -100px;
 }
+
 .docker {
   background-position-x: -300px;
   background-position-y: -100px;
 }
+
 .cloudflare {
   background-position-x: -350px;
   background-position-y: -100px;
 }
-.blog-icon{
+
+.blog-icon {
   background-image: url("/icons/favicon-128x128.svg") !important;
   background-position: center !important;
   background-size: contain !important;
 }
-.tunnel{
+
+.tunnel {
   background-position-x: -400px;
   background-position-y: -100px;
 }
-.nginx{
+
+.nginx {
   background-position-x: -350px;
   background-position-y: -150px;
 }
-.playground{
+
+.playground {
   background-position-x: -300px;
   background-position-y: -150px;
 }
+
 @layer utilities {
   .semi-bold {
     text-shadow: 0px 0px 0.5px $normal-text-color;
@@ -155,7 +186,7 @@ span.icon {
   }
 }
 
-@media only screen and ( max-width: 1360px) {
+@media only screen and (max-width: 1360px) {
   nz-layout {
     @apply px-[50px] max-w-none #{!important};
   }
@@ -166,19 +197,21 @@ span.icon {
     @apply px-[50px] max-w-none #{!important};
   }
 }
-@media only screen and ( max-width: 1024px) {
+
+@media only screen and (max-width: 1024px) {
   nz-layout {
     @apply px-[40px] max-w-none #{!important};
   }
 }
-@media only screen and ( max-width: 768px) {
+
+@media only screen and (max-width: 768px) {
   nz-layout {
     @apply px-[30px] max-w-none #{!important};
   }
 }
-@media only screen and ( max-width: 480px) {
+
+@media only screen and (max-width: 480px) {
   nz-layout {
     @apply px-[20px] max-w-none #{!important};
   }
 }
-

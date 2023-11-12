@@ -8,19 +8,24 @@ app-creative {
   .ant-card-body {
     @apply pt-0 pb-2 #{!important};
   }
-  .item-bottom .ant-card-body{
+
+  .item-bottom .ant-card-body {
     @apply pt-2 #{!important};
   }
 
   .outer > .ant-card-body > label {
     @apply h-8;
   }
+
   .creative-row .ant-card-body label {
     @apply h-6;
   }
+
   .outer {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
+
   .outer .ant-card-body {
     @apply px-2 #{!important};
   }
@@ -37,6 +42,7 @@ app-creative {
     content: "Tunnel";
     @apply w-[100px] h-[100px] absolute right-[-4.3rem] top-4 z-10 text-center;
   }
+
   .second-domain::after {
     background-image: url("/iconlist.svg");
     background-size: 900px 400px;
@@ -52,10 +58,11 @@ app-creative {
     @apply bg-contain bg-center;
   }
 }
+
 .ant-popover-inner {
   @apply rounded-xl;
 }
 
-.creative-row .icon:hover{
-  transform: scale(1.1,1.1);
+.creative-row .icon:hover {
+  transform: scale(1.1, 1.1);
 }

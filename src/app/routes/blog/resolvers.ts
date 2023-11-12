@@ -1,7 +1,7 @@
 import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 import { MetaTag } from '@analogjs/router';
 import { injectContentFiles } from '@analogjs/content';
-import {PostMetadata} from "@models";
+import { PostMetadata } from '@models';
 
 // temporary
 function injectActivePostAttributes(

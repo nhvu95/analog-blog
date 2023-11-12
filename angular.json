@@ -43,7 +43,8 @@
           "defaultConfiguration": "production",
           "configurations": {
             "development": {
-              "mode": "development"
+              "mode": "development",
+              "outputHashing": "all"
             },
             "production": {
               "sourcemap": false,
@@ -62,10 +63,12 @@
           "configurations": {
             "development": {
               "buildTarget": "my-app:build:development",
-              "hmr": true
+              "hmr": true,
+              "outputHashing": "all"
             },
             "production": {
-              "buildTarget": "my-app:build:production"
+              "buildTarget": "my-app:build:production",
+              "outputHashing": "all"
             }
           }
         },

@@ -2,14 +2,16 @@ app-comment {
   .count {
     @apply pl-[8px] cursor-auto;
   }
+
   .ant-comment-rtl .count {
     @apply pr-[8px] pl-0;
   }
 
-  .ant-comment-actions>li {
+  .ant-comment-actions > li {
     @apply h-6 overflow-hidden;
   }
-  .ant-comment-inner{
+
+  .ant-comment-inner {
     @apply pt-0;
   }
 }
