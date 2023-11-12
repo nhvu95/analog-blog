@@ -4,12 +4,6 @@ import {fileURLToPath, URL} from 'url';
 import analog from '@analogjs/platform';
 import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vitejs.dev/config/
-const hooks = (config) => ({
-  ready: () => {
-    console.log('Initialize success');
-    // Execute your code here
-  },
-});
 export default defineConfig(({ mode }) => ({
   publicDir: 'src/assets',
   cacheDir: './cache',
@@ -48,9 +42,6 @@ export default defineConfig(({ mode }) => ({
         inlineStylesExtension: 'scss',
         tsconfig:
           mode === 'test' ? './tsconfig.spec.json' : './tsconfig.app.json',
-      },
-      nitro: {
-        hooks: hooks(this),
       },
     }),
     tsconfigPaths(),

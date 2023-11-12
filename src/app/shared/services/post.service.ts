@@ -12,7 +12,7 @@ export class PostService {
   }
 
   viewPost(postSlug: string): Observable<any> {
-    return this.http.put<any>(`/api/v1/view-post?slug=${postSlug}`, {});
+    return this.http.get<any>(`/api/v1/view-post?slug=${postSlug}`, {});
   }
 
   getAll(): Observable<IPostInfo[]> {
