@@ -1,4 +1,5 @@
 import 'zone.js';
+import 'reflect-metadata';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideFileRouter } from '@analogjs/router';
 
@@ -15,7 +16,6 @@ import 'prismjs/components/prism-typescript.js';
 import 'prismjs/components/prism-java.js';
 import 'prismjs/themes/prism-okaidia.css';
 
-console.log('Here you can start to work 1');
 bootstrapApplication(AppComponent, {
   providers: [
     provideFileRouter(),

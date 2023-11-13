@@ -9,10 +9,3 @@ export const AppDataSource = new DataSource({
   synchronize: true,
   logging: false,
 });
-AppDataSource.initialize()
-  .then(() => {
-    console.log('Initialize success');
-  })
-  .catch((err) => {
-    console.log(err);
-  });

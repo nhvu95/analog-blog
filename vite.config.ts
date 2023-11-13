@@ -3,6 +3,9 @@ import {defineConfig} from 'vite';
 import {fileURLToPath, URL} from 'url';
 import analog from '@analogjs/platform';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import * as path from 'path';
+import * as fs from 'node:fs';
+import type {Nitro} from 'nitropack';
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   publicDir: 'src/assets',
@@ -42,6 +45,42 @@ export default defineConfig(({ mode }) => ({
         inlineStylesExtension: 'scss',
         tsconfig:
           mode === 'test' ? './tsconfig.spec.json' : './tsconfig.app.json',
+      },
+      nitro: {
+        hooks: {
+          compiled(nitro: Nitro) {
+            const packages = [];
+            packages.push({
+              dest: path.join(
+                nitro.options.output.dir,
+                'server',
+                'node_modules',
+                'parse5'
+              ),
+              src: path.join('.', 'node_modules', 'parse5'),
+            });
+            packages.push({
+              dest: path.join(
+                nitro.options.output.dir,
+                'server',
+                'node_modules',
+                'entities'
+              ),
+              src: path.join('.', 'node_modules', 'entities'),
+            });
+            try {
+              packages.forEach((pack) => {
+                console.log('try to cp', pack.src, pack.dest);
+                fs.cpSync(pack.src, pack.dest, {
+                  force: true,
+                  recursive: true,
+                });
+              });
+            } catch (err) {
+              console.log(err);
+            }
+          },
+        },
       },
     }),
     tsconfigPaths(),
