@@ -1,6 +1,6 @@
 <ng-container *ngIf="post$ | async as post">
     <div class="markdown-body">
-        <img [src]="post.attributes['header_image']" class="w-full rounded-lg"/>
+        <img [src]="post.attributes['header_image']" class="w-full rounded-lg" loading="lazy"/>
         <h1>{{ post.attributes.title }}</h1>
         <analog-markdown [content]="post.content"></analog-markdown>
     </div>
