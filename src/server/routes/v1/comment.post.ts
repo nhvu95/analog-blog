@@ -1,10 +1,10 @@
-import { defineEventHandler, getQuery } from 'h3';
+import { defineEventHandler, readBody } from 'h3';
 import { IPostInfo } from '../../models/post.model';
 import { AppDataSource } from '../../utils/database';
 import { ICommentInfo } from '../../models/comment.model';
 
 export default defineEventHandler(async (event) => {
-  const queryData = getQuery(event) as {
+  const queryData = (await readBody(event)) as {
     slug: string;
     comment: string;
     author: string;

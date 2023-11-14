@@ -8,11 +8,15 @@ export class PostService {
   constructor(private http: HttpClient) {}
 
   likePost(postSlug: string, like: boolean): Observable<void> {
-    return this.http.get<void>(`/api/v1/like-post?slug=${postSlug}`);
+    return this.http.put<void>(`/api/v1/like-post`, {
+      slug: postSlug,
+    });
   }
 
   viewPost(postSlug: string): Observable<any> {
-    return this.http.get<any>(`/api/v1/view-post?slug=${postSlug}`, {});
+    return this.http.put<any>(`/api/v1/view-post`, {
+      slug: postSlug,
+    });
   }
 
   getAll(): Observable<IPostInfo[]> {

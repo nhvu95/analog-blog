@@ -1,9 +1,9 @@
-import { defineEventHandler, getQuery } from 'h3';
+import { defineEventHandler, readBody } from 'h3';
 import { AppDataSource } from '../../utils/database';
 import { ICommentInfo } from '../../models/comment.model';
 
 export default defineEventHandler(async (event) => {
-  const queryData = getQuery(event) as {
+  const queryData = (await readBody(event)) as {
     commentId: number;
     unlike: string;
   };
@@ -14,16 +14,12 @@ export default defineEventHandler(async (event) => {
     await entityComment.update(
       { id: comments[0].id },
       {
-        disliked: comments[0].disliked
-          ? comments[0].disliked + (queryData.unlike === 'true' ? -1 : 1)
+        liked: comments[0].liked
+          ? comments[0].liked + (queryData.unlike === 'true' ? -1 : 1)
           : 1,
       }
     );
-    return (
-      (await entityComment.findBy({ id: queryData.commentId }))[0] ?? {
-        error: 404,
-      }
-    );
+    return (await entityComment.findBy({ id: queryData.commentId }))[0];
   } else {
     return { error: 404 };
   }

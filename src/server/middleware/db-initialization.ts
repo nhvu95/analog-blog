@@ -3,9 +3,9 @@ import { AppDataSource } from '../utils/database';
 import { DataSource } from 'typeorm';
 
 let dataSource: DataSource | null = null;
-export default defineEventHandler(() => {
+export default defineEventHandler(async () => {
   if (!dataSource) {
-    AppDataSource.initialize()
+    await AppDataSource.initialize()
       .then((source) => {
         console.log('Initialize success');
         dataSource = source;
