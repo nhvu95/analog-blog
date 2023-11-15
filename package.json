@@ -15,8 +15,8 @@
     "start:prod": "ng build && node ./dist/server/server/index.mjs"
   },
   "dependencies": {
-    "@analogjs/content": "^0.1.7",
-    "@analogjs/router": "latest",
+    "@analogjs/content": "^0.2.19",
+    "@analogjs/router": "^0.2.19",
     "@angular/animations": "^16.2.12",
     "@angular/common": "^16.2.12",
     "@angular/compiler": "^16.2.12",
@@ -28,10 +28,13 @@
     "@angular/router": "^16.2.12",
     "@ngneat/overview": "^4.1.0",
     "@ngneat/until-destroy": "^9.2.3",
-    "@nrwl/angular": "^15.7.0",
+    "@nx/angular": "^16.10.0",
     "front-matter": "^4.0.2",
-    "marked": "^4.2.12",
-    "ng-zorro-antd": "^15.0.3",
+    "marked": "^5.0.2",
+    "marked-gfm-heading-id": "^3.1.0",
+    "marked-highlight": "^2.0.1",
+    "mermaid": "^10.2.4",
+    "ng-zorro-antd": "^16.2.2",
     "prettier": "^2.8.8",
     "prismjs": "^1.29.0",
     "reflect-metadata": "^0.1.13",
@@ -44,18 +47,19 @@
     "zone.js": "~0.13.3"
   },
   "devDependencies": {
-    "@analogjs/platform": "latest",
+    "@analogjs/platform": "^0.2.19",
     "@angular-devkit/build-angular": "^16.2.10",
     "@angular/cli": "~16.2.10",
     "@angular/compiler-cli": "^16.2.12",
-    "@nrwl/vite": "^15.7.0",
+    "@nx/vite": "^16.10.0",
     "@types/node": "^20.9.0",
     "autoprefixer": "^10.4.13",
-    "nx": "^15.7.0",
+    "jsdom": "^22.1.0",
+    "nx": "^16.10.0",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7",
     "typescript": "~5.1.6",
-    "vite": "^4.0.3",
-    "vitest": "^0.25.8"
+    "vite": "^4.4.8",
+    "vitest": "^0.34.6"
   }
 }

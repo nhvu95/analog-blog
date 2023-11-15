@@ -1,31 +1,23 @@
 import 'reflect-metadata';
 import 'zone.js/node';
 // import 'zone.js/dist/zone-node';
-import {
-  renderApplication,
-  ɵSERVER_CONTEXT as SERVER_CONTEXT,
-} from '@angular/platform-server';
+import { renderApplication } from '@angular/platform-server';
 import { enableProdMode } from '@angular/core';
-import { provideFileRouter } from '@analogjs/router';
-import { withEnabledBlockingInitialNavigation } from '@angular/router';
 import { AppComponent } from './app/app.component';
-import { provideHttpClient } from '@angular/common/http';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { config } from './app/app.config.server';
 
 if (import.meta.env.PROD) {
   enableProdMode();
 }
 export default async function render(url: string, document: string) {
-  const html = await renderApplication(AppComponent, {
-    appId: 'analog-app',
+  const html = await renderApplication(bootstrap, {
     document,
     url,
-    providers: [
-      provideHttpClient(),
-      NoopAnimationsModule,
-      provideFileRouter(withEnabledBlockingInitialNavigation()),
-      { provide: SERVER_CONTEXT, useValue: 'ssr-analog' },
-    ],
   });
   return html;
+}
+
+export function bootstrap() {
+  return bootstrapApplication(AppComponent, config);
 }
