@@ -2,6 +2,7 @@
 
 # Compiled output
 /dist
+/line.sqlite
 /tmp
 /out-tsc
 /bazel-out
