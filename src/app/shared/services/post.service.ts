@@ -20,6 +20,8 @@ export class PostService {
   }
 
   getAll(): Observable<IPostInfo[]> {
-    return this.http.get<IPostInfo[]>('/api/v1/get-all-post');
+    return this.http.get<IPostInfo[]>(
+      'http://localhost:3000/api/v1/get-all-post'
+    );
   }
 }
